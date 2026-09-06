@@ -1,0 +1,29 @@
+id: "03_section"
+pageType: "section"
+background:
+  color: "#f5f5f5"          # $bg 内联
+elements:
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [40, 120, 420, 260]
+    fill: { type: "solid", color: "$primary" }
+  - elementType: "text"
+    bounds: [60, 150, 380, 200]
+    content:
+      text: "<p style='text-align:center'>02</p>"
+      align: ["center", "middle"]
+      fontSize: 90
+      bold: true
+      color: "#ffffff"
+  - elementType: "text"
+    bounds: [500, 170, 420, 70]
+    content:
+      text: "<p>章节标题</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "text"
+    bounds: [500, 250, 420, 50]
+    content:
+      text: "<p>章节一句话引言</p>"
+      align: ["left", "middle"]
+      style: "$h3"

@@ -1,0 +1,34 @@
+id: "06_compare"
+pageType: "content"
+background:
+  color: "#caf0f8"
+elements:
+  - elementType: "text"
+    bounds: [48, 14, 400, 18]
+    content:
+      text: "<p><span style='color:#0077b6'>COMPARE · 双引擎对比</span></p>"
+      align: ["left", "middle"]
+  - elementType: "text"
+    bounds: [48, 36, 864, 42]
+    content:
+      text: "<p>选哪条路径？</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [48, 86, 48, 3]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "table"
+    bounds: [48, 110, 864, 330]
+    rows:
+      - [{ text: "" }, { text: "PPTD 经典" }, { text: "JSON 驱动" }]
+      - [{ text: "数据格式" }, { text: "清单+页面" }, { text: "单文件 JSON" }]
+      - [{ text: "背景支持" }, { text: "内联#HEX" }, { text: "$theme+渐变" }]
+      - [{ text: "复合组件" }, { text: "无" }, { text: "5 种" }]
+      - [{ text: "适用场景" }, { text: "编辑器联动" }, { text: "数据批量" }]
+  - elementType: "text"
+    bounds: [48, 462, 864, 24]
+    content:
+      text: "<p style='text-align:center'><span style='color:#5c7a99'>两条路径产出同样的原生 PPTX，可随时切换</span></p>"
+      align: ["center", "middle"]
+      style: "$muted"

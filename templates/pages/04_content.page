@@ -1,0 +1,44 @@
+id: "04_content"
+pageType: "content"
+background:
+  color: "#f5f5f5"          # $bg 内联
+elements:
+  - elementType: "text"
+    bounds: [40, 50, 600, 60]
+    content:
+      text: "<p>内容页标题</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [40, 140, 420, 330]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [65, 160, 380, 50]
+    content:
+      text: "<p>左栏标题</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [65, 215, 380, 230]
+    content:
+      text: "<p>左栏正文：描述性内容，保持简洁。</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [500, 140, 420, 330]
+    fill: { type: "solid", color: "$ink" }
+  - elementType: "text"
+    bounds: [525, 160, 380, 50]
+    content:
+      text: "<p>右栏标题</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [525, 215, 380, 230]
+    content:
+      text: "<p>右栏正文（深色底，用浅色文字）。</p>"
+      align: ["left", "top"]
+      style: "$muted"

@@ -1,0 +1,35 @@
+# pptd-compare —— PPTD 经典路径对照测试（与 engine-test 同主题同配色）
+# 配色 = 纯净科技蓝（MiniMax 18 套 #15 标准映射，见 references/design-system.md）
+theme:
+  colors:
+    $bg: "#caf0f8"
+    $paper: "#ffffff"
+    $primary: "#03045e"
+    $accent: "#0077b6"
+    $text: "#001f3d"
+    $muted: "#5c7a99"
+    $line: "#b8dce8"
+    $ink: "#03045e"
+    $green: "#00b4d8"
+    $brass: "#90e0ef"
+  textStyles:
+    $cover-title: { fontSize: 48, bold: true, color: "#ffffff", letterSpacing: 1 }
+    $cover-kicker: { fontSize: 12, bold: true, color: "#90e0ef", letterSpacing: 2 }
+    $cover-lede:   { fontSize: 16, bold: false, color: "#caf0f8", lineHeight: 1.4 }
+    $title:        { fontSize: 36, bold: true, color: "$primary" }
+    $h2:           { fontSize: 24, bold: true, color: "$text" }
+    $h3:           { fontSize: 18, bold: true, color: "$text" }
+    $body:         { fontSize: 14, bold: false, color: "$text", lineHeight: 1.5 }
+    $muted:        { fontSize: 12, bold: false, color: "$muted" }
+    $stat:         { fontSize: 40, bold: true, color: "$accent" }
+    $stat-label:   { fontSize: 12, bold: false, color: "$muted" }
+    $card-title:   { fontSize: 16, bold: true, color: "$text" }
+    $card-desc:    { fontSize: 12, bold: false, color: "$muted", lineHeight: 1.4 }
+pages:
+  - "pages/01_cover.page"
+  - "pages/02_toc.page"
+  - "pages/03_fusion.page"
+  - "pages/04_design.page"
+  - "pages/05_engines.page"
+  - "pages/06_compare.page"
+  - "pages/07_final.page"

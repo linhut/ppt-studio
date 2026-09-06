@@ -1,0 +1,76 @@
+id: "04_arch"
+pageType: "content"
+background:
+  color: "#f0f8fc"   # $bg 内联
+elements:
+  - elementType: "text"
+    bounds: [40, 50, 600, 60]
+    content:
+      text: "<p>系统架构总览</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [40, 140, 880, 80]
+    fill: { type: "solid", color: "$ink" }
+  - elementType: "text"
+    bounds: [60, 155, 840, 50]
+    content:
+      text: "<p>用户入口 · Web / App / API</p>"
+      align: ["center", "middle"]
+      style: "$h3"
+  - elementType: "line"
+    bounds: [460, 220, 40, 2]
+    border: { color: "$accent", width: 2 }
+    arrow: [0, "arrow"]
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [60, 260, 260, 180]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [80, 280, 220, 40]
+    content:
+      text: "<p>规划 Agent</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [80, 330, 220, 90]
+    content:
+      text: "<p>任务拆解与调度<br/>意图理解<br/>上下文管理</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [350, 260, 260, 180]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [370, 280, 220, 40]
+    content:
+      text: "<p>执行 Agent</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [370, 330, 220, 90]
+    content:
+      text: "<p>工具调用<br/>代码执行<br/>结果校验</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [640, 260, 260, 180]
+    fill: { type: "solid", color: "$ink" }
+  - elementType: "text"
+    bounds: [660, 280, 220, 40]
+    content:
+      text: "<p>知识库</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [660, 330, 220, 90]
+    content:
+      text: "<p>向量检索<br/>RAG 管线<br/>记忆持久化</p>"
+      align: ["left", "top"]
+      color: "#d8ecf7"
+      fontSize: 14

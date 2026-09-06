@@ -1,0 +1,78 @@
+id: "01_cover"
+pageType: "cover"
+background:
+  color: "#03045e"   # $ink 内联
+elements:
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [0, 0, 960, 4]
+    fill: { type: "solid", color: "$green" }
+  - elementType: "text"
+    bounds: [96, 64, 768, 20]
+    content:
+      text: "<p style='text-align:center'>PPT 全能工坊 · 三源融合</p>"
+      align: ["center", "middle"]
+      style: "$cover-kicker"
+  - elementType: "text"
+    bounds: [96, 96, 768, 84]
+    content:
+      text: "<p style='text-align:center'>ppt-studio v3</p>"
+      align: ["center", "middle"]
+      style: "$cover-title"
+  - elementType: "text"
+    bounds: [96, 214, 768, 32]
+    content:
+      text: "<p style='text-align:center'>一次对话，产出原生 .pptx 文件 — 不是网页</p>"
+      align: ["center", "middle"]
+      style: "$cover-lede"
+  - elementType: "text"
+    bounds: [96, 252, 768, 26]
+    content:
+      text: "<p style='text-align:center'><span style='color:#90e0ef'>html-ppt 布局 · MiniMax 18 套配色 · np-ppt 编译内核</span></p>"
+      align: ["center", "middle"]
+      style: "$muted"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [256, 320, 110, 34]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [256, 326, 110, 22]
+    content:
+      text: "<p style='text-align:center'><span style='color:#ffffff'>18 套配色</span></p>"
+      align: ["center", "middle"]
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [382, 320, 110, 34]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [382, 326, 110, 22]
+    content:
+      text: "<p style='text-align:center'><span style='color:#ffffff'>31 类布局</span></p>"
+      align: ["center", "middle"]
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [508, 320, 110, 34]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [508, 326, 110, 22]
+    content:
+      text: "<p style='text-align:center'><span style='color:#ffffff'>9 类元素</span></p>"
+      align: ["center", "middle"]
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [634, 320, 110, 34]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [634, 326, 110, 22]
+    content:
+      text: "<p style='text-align:center'><span style='color:#ffffff'>双引擎</span></p>"
+      align: ["center", "middle"]
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 498, 864, 28]
+    fill: { type: "solid", color: "$primary" }
+  - elementType: "text"
+    bounds: [58, 501, 844, 22]
+    content:
+      text: "<p style='text-align:center'><span style='color:#ffffff'>ppt-studio — 融合三家专长的一站式 PPT 工坊</span></p>"
+      align: ["center", "middle"]

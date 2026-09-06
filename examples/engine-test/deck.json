@@ -1,0 +1,1049 @@
+{
+  "_doc": "ppt-studio v3 三源融合实测 deck（harness 哲学版）：白底 + 单品牌蓝 + 黑字灰注释，9 页",
+  "canvas": {
+    "w": 960,
+    "h": 540
+  },
+  "theme": {
+    "colors": {
+      "$bg": "#FFFFFF",
+      "$paper": "#F5F7FA",
+      "$primary": "#0B3D91",
+      "$accent": "#2E6BB0",
+      "$text": "#1A1A1A",
+      "$muted": "#6B7280",
+      "$line": "#E5E7EB",
+      "$ink": "#0B3D91",
+      "$green": "#1E7B4F",
+      "$brass": "#A67C00"
+    }
+  },
+  "slides": [
+    {
+      "id": "01",
+      "title": "封面",
+      "background": {
+        "color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 96,
+          "y": 64,
+          "w": 768,
+          "h": 20,
+          "text": "PPT 全能工坊 · 三源融合",
+          "fontSize": 13,
+          "color": "$accent",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 96,
+          "y": 96,
+          "w": 768,
+          "h": 84,
+          "text": "ppt-studio v3",
+          "fontSize": 54,
+          "color": "$primary",
+          "bold": true,
+          "font": "Arial",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 96,
+          "y": 214,
+          "w": 768,
+          "h": 32,
+          "text": "一次对话，产出原生 .pptx 文件 — 不是网页",
+          "fontSize": 18,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "role": "caption",
+          "x": 96,
+          "y": 252,
+          "w": 768,
+          "h": 26,
+          "text": "三源融合：布局 · 配色 · 引擎",
+          "fontSize": 13,
+          "color": "$muted",
+          "align": "center"
+        },
+        {
+          "type": "shape",
+          "shapeName": "roundRect",
+          "x": 256,
+          "y": 320,
+          "w": 110,
+          "h": 34,
+          "fill": {
+            "color": "$primary"
+          },
+          "rectRadius": 0.5
+        },
+        {
+          "type": "text",
+          "x": 256,
+          "y": 326,
+          "w": 110,
+          "h": 22,
+          "text": "18 套配色",
+          "fontSize": 14,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "shape",
+          "shapeName": "roundRect",
+          "x": 382,
+          "y": 320,
+          "w": 110,
+          "h": 34,
+          "fill": {
+            "color": "$primary"
+          },
+          "rectRadius": 0.5
+        },
+        {
+          "type": "text",
+          "x": 382,
+          "y": 326,
+          "w": 110,
+          "h": 22,
+          "text": "31 类布局",
+          "fontSize": 14,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "shape",
+          "shapeName": "roundRect",
+          "x": 508,
+          "y": 320,
+          "w": 110,
+          "h": 34,
+          "fill": {
+            "color": "$primary"
+          },
+          "rectRadius": 0.5
+        },
+        {
+          "type": "text",
+          "x": 508,
+          "y": 326,
+          "w": 110,
+          "h": 22,
+          "text": "9 类元素",
+          "fontSize": 14,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "shape",
+          "shapeName": "roundRect",
+          "x": 634,
+          "y": 320,
+          "w": 110,
+          "h": 34,
+          "fill": {
+            "color": "$primary"
+          },
+          "rectRadius": 0.5
+        },
+        {
+          "type": "text",
+          "x": 634,
+          "y": 326,
+          "w": 110,
+          "h": 22,
+          "text": "双引擎",
+          "fontSize": 14,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "ppt-studio — 融合三家专长的一站式 PPT 工坊"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "目录",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Contents · 目录",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "今天的内容",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_2x3",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 352,
+          "gap": 24,
+          "items": [
+            {
+              "title": "01 · 三源融合",
+              "desc": "三家 skill 各自专长，取长补短"
+            },
+            {
+              "title": "02 · 设计系统",
+              "desc": "字号层级 / 间距 / 圆角真实值"
+            },
+            {
+              "title": "03 · 双引擎",
+              "desc": "PPTD 经典 + JSON 数据驱动"
+            },
+            {
+              "title": "04 · 复合组件",
+              "desc": "卡片 / 统计卡 / 目录列表"
+            },
+            {
+              "title": "05 · 质量闭环",
+              "desc": "5 维度审查 + 硬约束校验"
+            },
+            {
+              "title": "06 · 路线图",
+              "desc": "接下来做什么，怎么演进"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "三源融合",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Design · 取长补短",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "三家 skill 的专长",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_2x3",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 352,
+          "gap": 24,
+          "items": [
+            {
+              "title": "html-ppt",
+              "desc": "31 类布局模板 + token 设计系统 + 字号层级 + 演讲者逐字稿",
+              "color": "$accent"
+            },
+            {
+              "title": "Color Scheme",
+              "desc": "18 套成品配色（专业审校）+ 7 色阶体系 + 中英文字体规范",
+              "color": "$green"
+            },
+            {
+              "title": "npm-ppt",
+              "desc": "PPTD DSL + 960×540pt 画布 + Python-PPTX 高保真编译内核",
+              "color": "$primary"
+            },
+            {
+              "title": "harness-anything",
+              "desc": "JSON 数据驱动 + 元素路由器 + 设计预设 + 质量审查思路",
+              "color": "$brass"
+            },
+            {
+              "title": "取长补短",
+              "desc": "布局用 html-ppt，配色用 MiniMax，引擎用 np-ppt，架构借鉴 harness",
+              "color": "$accent"
+            },
+            {
+              "title": "最终产出",
+              "desc": "原生 .pptx 文件，直接可编辑，不是网页不是截图",
+              "color": "$green"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "设计系统",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Design System · 真实值",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "设计规范（来自三家源码）",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_1x4_info",
+          "x": 48,
+          "y": 106,
+          "w": 864,
+          "h": 140,
+          "items": [
+            {
+              "num": "54pt",
+              "label": "封面标题",
+              "color": "$primary"
+            },
+            {
+              "num": "36pt",
+              "label": "页面标题",
+              "color": "$accent"
+            },
+            {
+              "num": "14pt",
+              "label": "正文",
+              "color": "$green"
+            },
+            {
+              "num": "12pt",
+              "label": "弱化文字",
+              "color": "$muted"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "role": "h3",
+          "x": 48,
+          "y": 268,
+          "w": 400,
+          "h": 30,
+          "text": "18 套成品配色一览",
+          "fontSize": 24,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "image",
+          "x": 48,
+          "y": 306,
+          "w": 864,
+          "h": 176,
+          "file": "palette-sample.png"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "双引擎",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Engines · 双引擎",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "两条生成路径",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "roundRect",
+          "x": 48,
+          "y": 110,
+          "w": 420,
+          "h": 340,
+          "fill": {
+            "color": "$paper"
+          },
+          "border": {
+            "color": "$line",
+            "width": 1
+          },
+          "rectRadius": 0.04
+        },
+        {
+          "type": "text",
+          "role": "h3",
+          "x": 72,
+          "y": 132,
+          "w": 372,
+          "h": 30,
+          "text": "PPTD 经典路径",
+          "fontSize": 22,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 72,
+          "y": 176,
+          "w": 372,
+          "h": 268,
+          "text": "• YAML 清单 + 逐页 .page\n• 55173 可视化编辑器联动\n• 背景色需内联（inline_bg 辅助）\n• 适合精细逐页控制",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.6
+        },
+        {
+          "type": "shape",
+          "shapeName": "roundRect",
+          "x": 492,
+          "y": 110,
+          "w": 420,
+          "h": 340,
+          "fill": {
+            "color": "$paper"
+          },
+          "border": {
+            "color": "$line",
+            "width": 1
+          },
+          "rectRadius": 0.04
+        },
+        {
+          "type": "text",
+          "role": "h3",
+          "x": 516,
+          "y": 132,
+          "w": 372,
+          "h": 30,
+          "text": "JSON 数据驱动",
+          "fontSize": 22,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 516,
+          "y": 176,
+          "w": 372,
+          "h": 268,
+          "text": "• 单文件 deck.json，Agent 友好\n• $theme 变量直接用，支持渐变\n• 复合组件（卡片/统计卡等）\n• 适合数据驱动、批量生成",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.6
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "数据成绩",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Metrics · 关键数字",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "这一季，我们做到了什么",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "chart",
+          "x": 48,
+          "y": 110,
+          "w": 560,
+          "h": 360,
+          "color": "$green",
+          "data": {
+            "rows": [
+              [
+                "文本",
+                "元素",
+                42
+              ],
+              [
+                "形状",
+                "元素",
+                31
+              ],
+              [
+                "卡片",
+                "元素",
+                24
+              ],
+              [
+                "表格",
+                "元素",
+                15
+              ],
+              [
+                "图表",
+                "元素",
+                10
+              ],
+              [
+                "图片",
+                "元素",
+                8
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 640,
+          "y": 116,
+          "w": 272,
+          "h": 372,
+          "text": "元素类型覆盖\n\n• text / shape 为基础\n• 复合组件是加分项\n• 图表支持原生插入\n\n结论：一套引擎覆盖\n90% 常见 PPT 场景",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.6
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "对比表",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Compare · 双引擎对比",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "选哪条路径？",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "table",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 330,
+          "rows": 5,
+          "cols": 3,
+          "header_color": "$ink",
+          "data": [
+            [
+              "",
+              "PPTD 经典",
+              "JSON 驱动"
+            ],
+            [
+              "数据格式",
+              "清单+页面",
+              "单文件 JSON"
+            ],
+            [
+              "背景支持",
+              "内联#HEX",
+              "$theme+渐变"
+            ],
+            [
+              "复合组件",
+              "无",
+              "5 种"
+            ],
+            [
+              "适用场景",
+              "编辑器联动",
+              "数据批量"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "role": "caption",
+          "x": 48,
+          "y": 462,
+          "w": 864,
+          "h": 24,
+          "text": "两条路径产出同样的原生 PPTX，可随时切换",
+          "fontSize": 13,
+          "color": "$muted",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "路线图",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "Roadmap · 2026",
+          "fontSize": 13,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 48,
+          "text": "接下来四个阶段",
+          "fontSize": 40,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_2x3",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 352,
+          "gap": 24,
+          "items": [
+            {
+              "title": "NOW · 融合落地",
+              "desc": "三源设计规范 + 双引擎已可用",
+              "color": "$green"
+            },
+            {
+              "title": "NEXT · 布局库",
+              "desc": "31 类布局全部 JSON 模板化",
+              "color": "$accent"
+            },
+            {
+              "title": "LATER · 预设市场",
+              "desc": "更多主题与配色一键分享",
+              "color": "$primary"
+            },
+            {
+              "title": "VISION · 编辑器",
+              "desc": "可视化预览 + 一键导出",
+              "color": "$brass"
+            },
+            {
+              "title": "质量闭环",
+              "desc": "审查驱动：越界/遮挡/对比度自动查",
+              "color": "$green"
+            },
+            {
+              "title": "让 PPT 变简单",
+              "desc": "一次对话，交付可用 PPTX",
+              "color": "$accent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "致谢",
+      "background": {
+        "color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 535,
+          "w": 960,
+          "h": 5,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 96,
+          "y": 180,
+          "w": 768,
+          "h": 84,
+          "text": "谢谢观看",
+          "fontSize": 52,
+          "color": "$primary",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 96,
+          "y": 296,
+          "w": 768,
+          "h": 30,
+          "text": "Q & A  ·  欢迎试用 ppt-studio",
+          "fontSize": 18,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "ppt-studio — 一次对话生成原生 PPTX"
+        }
+      ]
+    }
+  ]
+}

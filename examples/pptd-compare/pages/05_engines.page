@@ -1,0 +1,62 @@
+id: "05_engines"
+pageType: "content"
+background:
+  color: "#caf0f8"
+elements:
+  - elementType: "text"
+    bounds: [48, 14, 400, 18]
+    content:
+      text: "<p><span style='color:#0077b6'>ENGINES · 双引擎</span></p>"
+      align: ["left", "middle"]
+  - elementType: "text"
+    bounds: [48, 36, 864, 42]
+    content:
+      text: "<p>两条生成路径</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [48, 86, 48, 3]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 110, 420, 340]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [72, 132, 372, 30]
+    content:
+      text: "<p>PPTD 经典路径</p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [72, 168, 36, 3]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [72, 186, 372, 220]
+    content:
+      text: "<p>• YAML 清单 + 逐页 .page</p><p>• 55173 可视化编辑器联动</p><p>• 背景色需内联（inline_bg 辅助）</p><p>• 适合精细逐页控制</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [492, 110, 420, 340]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [516, 132, 372, 30]
+    content:
+      text: "<p><span style='color:#0077b6'>JSON 数据驱动</span></p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [516, 168, 36, 3]
+    fill: { type: "solid", color: "$green" }
+  - elementType: "text"
+    bounds: [516, 186, 372, 220]
+    content:
+      text: "<p>• 单文件 deck.json，Agent 友好</p><p>• $theme 变量直接用，支持渐变</p><p>• 复合组件（卡片/统计卡等）</p><p>• 适合数据驱动、批量生成</p>"
+      align: ["left", "top"]
+      style: "$body"

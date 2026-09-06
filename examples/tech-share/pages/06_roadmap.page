@@ -1,0 +1,79 @@
+id: "06_roadmap"
+pageType: "content"
+background:
+  color: "#f0f8fc"   # $bg 内联
+elements:
+  - elementType: "text"
+    bounds: [40, 50, 600, 60]
+    content:
+      text: "<p>路线图</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [40, 140, 200, 300]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [55, 160, 170, 40]
+    content:
+      text: "<p>NOW</p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "text"
+    bounds: [55, 210, 170, 200]
+    content:
+      text: "<p>多 Agent 编排<br/>观测体系<br/>成本优化</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [260, 140, 200, 300]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [275, 160, 170, 40]
+    content:
+      text: "<p>NEXT</p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "text"
+    bounds: [275, 210, 170, 200]
+    content:
+      text: "<p>模型路由<br/>记忆分层<br/>工具市场</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [480, 140, 200, 300]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [495, 160, 170, 40]
+    content:
+      text: "<p>LATER</p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "text"
+    bounds: [495, 210, 170, 200]
+    content:
+      text: "<p>多模态 Agent<br/>联邦学习<br/>自适应策略</p>"
+      align: ["left", "top"]
+      style: "$body"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [700, 140, 200, 300]
+    fill: { type: "solid", color: "$ink" }
+  - elementType: "text"
+    bounds: [715, 160, 170, 40]
+    content:
+      text: "<p>VISION</p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "text"
+    bounds: [715, 210, 170, 200]
+    content:
+      text: "<p>人人可用<br/>自主决策<br/>可信 AI</p>"
+      align: ["left", "top"]
+      color: "#d8ecf7"
+      fontSize: 14

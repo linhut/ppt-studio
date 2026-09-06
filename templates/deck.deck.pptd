@@ -1,0 +1,29 @@
+# ppt-studio 清单模板 —— 复制为 deck/deck.deck.pptd 后按需修改
+# 配色从 references/themes.md 选取一套（此处为「铂金白金」示例）
+theme:
+  colors:
+    $bg: "#f5f5f5"
+    $paper: "#ffffff"
+    $primary: "#0a0a0a"
+    $accent: "#0070F3"
+    $text: "#1f2937"
+    $muted: "#737373"
+    $line: "#e5e5e5"
+    $ink: "#0a0a0a"
+    $green: "#10B981"
+    $brass: "#D4AF37"
+  textStyles:
+    $cover-title: { fontSize: 48, bold: true, color: "$primary", letterSpacing: 1 }
+    $title:       { fontSize: 36, bold: true, color: "$primary" }
+    $h2:          { fontSize: 24, bold: true, color: "$text" }
+    $h3:          { fontSize: 18, bold: true, color: "$text" }
+    $body:        { fontSize: 14, bold: false, color: "$text", lineHeight: 1.4 }
+    $muted:       { fontSize: 12, bold: false, color: "$muted" }
+    $stat:        { fontSize: 44, bold: true, color: "$accent" }
+    $stat-label:  { fontSize: 13, bold: false, color: "$muted" }
+pages:
+  - "pages/01_cover.page"
+  - "pages/02_toc.page"
+  - "pages/03_section.page"
+  - "pages/04_content.page"
+  - "pages/99_final.page"

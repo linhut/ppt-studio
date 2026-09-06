@@ -1,0 +1,28 @@
+id: "07_final"
+pageType: "final"
+background:
+  color: "#03045e"
+elements:
+  - elementType: "text"
+    bounds: [96, 180, 768, 84]
+    content:
+      text: "<p style='text-align:center'>谢谢观看</p>"
+      align: ["center", "middle"]
+      fontSize: 52
+      bold: true
+      color: "#ffffff"
+  - elementType: "text"
+    bounds: [96, 296, 768, 32]
+    content:
+      text: "<p style='text-align:center'><span style='color:#caf0f8'>Q & A  ·  欢迎试用 ppt-studio</span></p>"
+      align: ["center", "middle"]
+      style: "$cover-lede"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 498, 864, 28]
+    fill: { type: "solid", color: "$primary" }
+  - elementType: "text"
+    bounds: [58, 501, 844, 22]
+    content:
+      text: "<p style='text-align:center'><span style='color:#ffffff'>ppt-studio — 一次对话生成原生 PPTX</span></p>"
+      align: ["center", "middle"]

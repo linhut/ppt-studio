@@ -1,0 +1,30 @@
+# 示例工程：技术分享《AI 助手架构实践》 —— 纯净科技蓝配色
+theme:
+  colors:
+    $bg: "#f0f8fc"
+    $paper: "#ffffff"
+    $primary: "#03045e"
+    $accent: "#00b4d8"
+    $text: "#0a2472"
+    $muted: "#6c93b8"
+    $line: "#d4e8f2"
+    $ink: "#03045e"
+    $green: "#00afb9"
+    $brass: "#90e0ef"
+  textStyles:
+    $cover-title: { fontSize: 48, bold: true, color: "$primary", letterSpacing: 1 }
+    $title:       { fontSize: 36, bold: true, color: "$primary" }
+    $h2:          { fontSize: 24, bold: true, color: "$text" }
+    $h3:          { fontSize: 18, bold: true, color: "$text" }
+    $body:        { fontSize: 14, bold: false, color: "$text", lineHeight: 1.4 }
+    $muted:       { fontSize: 12, bold: false, color: "$muted" }
+    $stat:        { fontSize: 44, bold: true, color: "$accent" }
+    $stat-label:  { fontSize: 13, bold: false, color: "$muted" }
+pages:
+  - "pages/01_cover.page"
+  - "pages/02_toc.page"
+  - "pages/03_section.page"
+  - "pages/04_arch.page"
+  - "pages/05_chart.page"
+  - "pages/06_roadmap.page"
+  - "pages/07_final.page"

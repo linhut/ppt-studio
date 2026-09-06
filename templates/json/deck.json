@@ -1,0 +1,375 @@
+{
+  "_doc": "ppt-studio JSON 数据驱动模板。字段说明见 references/json-engine.md。",
+  "canvas": {
+    "w": 960,
+    "h": 540
+  },
+  "theme": {
+    "colors": {
+      "$bg": "#FFFFFF",
+      "$paper": "#F5F8FC",
+      "$primary": "#1A3C8B",
+      "$accent": "#E67733",
+      "$ink": "#1A3C8B",
+      "$text": "#222222",
+      "$muted": "#666666",
+      "$line": "#D0D8E4",
+      "$green": "#188050",
+      "$brass": "#E67733"
+    },
+    "textStyles": {}
+  },
+  "slides": [
+    {
+      "id": "01",
+      "title": "封面",
+      "background": {
+        "color": "$bg"
+      },
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 532,
+          "w": 960,
+          "h": 8,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 130,
+          "w": 840,
+          "h": 90,
+          "text": "演讲标题",
+          "fontSize": 54,
+          "color": "$primary",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 240,
+          "w": 840,
+          "h": 44,
+          "text": "副标题 / 一句话说明",
+          "fontSize": 22,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 300,
+          "w": 840,
+          "h": 32,
+          "text": "演讲人  |  日期",
+          "fontSize": 16,
+          "color": "$muted",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "底部总结条：品牌色横幅一句话"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "目录",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 24,
+          "w": 400,
+          "h": 50,
+          "text": "目 录",
+          "fontSize": 44,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 60,
+          "y": 84,
+          "w": 120,
+          "h": 5,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "card_list_wide",
+          "x": 100,
+          "start_y": 120,
+          "item_h": 58,
+          "items": [
+            {
+              "num": "01",
+              "title": "章节一",
+              "sub": "一段话说明"
+            },
+            {
+              "num": "02",
+              "title": "章节二",
+              "sub": "一段话说明"
+            },
+            {
+              "num": "03",
+              "title": "章节三",
+              "sub": "一段话说明"
+            },
+            {
+              "num": "04",
+              "title": "章节四",
+              "sub": "一段话说明"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "KPI 页",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "关键指标",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "cards_1x4_info",
+          "x": 60,
+          "y": 120,
+          "w": 840,
+          "h": 140,
+          "items": [
+            {
+              "num": "99%",
+              "label": "满意度"
+            },
+            {
+              "num": "1.2k",
+              "label": "用户数"
+            },
+            {
+              "num": "36",
+              "label": "市场份额"
+            },
+            {
+              "num": "5★",
+              "label": "评分"
+            }
+          ]
+        },
+        {
+          "type": "cards_2x3",
+          "x": 60,
+          "y": 300,
+          "w": 840,
+          "h": 200,
+          "items": [
+            {
+              "title": "要点 A",
+              "desc": "一句话补充"
+            },
+            {
+              "title": "要点 B",
+              "desc": "一句话补充"
+            },
+            {
+              "title": "要点 C",
+              "desc": "一句话补充"
+            },
+            {
+              "title": "要点 D",
+              "desc": "一句话补充"
+            },
+            {
+              "title": "要点 E",
+              "desc": "一句话补充"
+            },
+            {
+              "title": "要点 F",
+              "desc": "一句话补充"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "图表页",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "数据图表",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "chart",
+          "x": 60,
+          "y": 100,
+          "w": 560,
+          "h": 380,
+          "color": "$green",
+          "data": {
+            "rows": [
+              [
+                "Q1",
+                "单位",
+                42
+              ],
+              [
+                "Q2",
+                "单位",
+                55
+              ],
+              [
+                "Q3",
+                "单位",
+                63
+              ],
+              [
+                "Q4",
+                "单位",
+                78
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 650,
+          "y": 100,
+          "w": 250,
+          "h": 360,
+          "text": "图表说明要点\n- 要点一\n- 要点二\n- 要点三",
+          "fontSize": 18,
+          "color": "$text",
+          "lineHeight": 1.5
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "对比表",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "方案对比",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "table",
+          "x": 60,
+          "y": 110,
+          "w": 840,
+          "h": 340,
+          "rows": 4,
+          "cols": 3,
+          "header_color": "$ink",
+          "data": [
+            [
+              "",
+              "方案 A",
+              "方案 B"
+            ],
+            [
+              "成本",
+              "低",
+              "高"
+            ],
+            [
+              "效率",
+              "中",
+              "高"
+            ],
+            [
+              "风险",
+              "低",
+              "中"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "致谢",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 180,
+          "w": 840,
+          "h": 90,
+          "text": "谢谢观看",
+          "fontSize": 52,
+          "color": "$text",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 290,
+          "w": 840,
+          "h": 40,
+          "text": "Q & A",
+          "fontSize": 24,
+          "color": "$muted",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "联系我：email@example.com"
+        }
+      ]
+    }
+  ]
+}

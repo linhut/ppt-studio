@@ -1,0 +1,507 @@
+{
+  "layout_library": "ppt-studio 布局模板库（借鉴 harness-anything LayoutTemplate）",
+  "usage": "把某布局的 elements 复制到 slide.elements，将 {占位符} 替换为实际内容",
+  "layouts": {
+    "cover": {
+      "name": "封面",
+      "category": "cover",
+      "description": "上下色条 + 大标题 + 副标题 + 底部总结条",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 532,
+          "w": 960,
+          "h": 8,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 130,
+          "w": 840,
+          "h": 90,
+          "text": "{title}",
+          "fontSize": 54,
+          "color": "$primary",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 240,
+          "w": 840,
+          "h": 44,
+          "text": "{subtitle}",
+          "fontSize": 22,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 300,
+          "w": 840,
+          "h": 32,
+          "text": "{author}  |  {date}",
+          "fontSize": 16,
+          "color": "$muted",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "{tagline}"
+        }
+      ]
+    },
+    "toc": {
+      "name": "目录",
+      "category": "content",
+      "description": "编号圆 + 章节标题 + 副标题的目录列表",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 24,
+          "w": 400,
+          "h": 50,
+          "text": "目 录",
+          "fontSize": 44,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 60,
+          "y": 84,
+          "w": 120,
+          "h": 5,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "card_list_wide",
+          "x": 100,
+          "start_y": 120,
+          "item_h": 58,
+          "items": "{items}"
+        }
+      ]
+    },
+    "section": {
+      "name": "章节页",
+      "category": "content",
+      "description": "大章节数字 + 章节名 + 简短说明",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 24,
+          "h": 540,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 150,
+          "w": 300,
+          "h": 100,
+          "text": "{num}",
+          "fontSize": 72,
+          "color": "$accent",
+          "bold": true,
+          "font": "Arial"
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 80,
+          "y": 250,
+          "w": 800,
+          "h": 70,
+          "text": "{title}",
+          "fontSize": 44,
+          "color": "$text",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "x": 80,
+          "y": 330,
+          "w": 760,
+          "h": 60,
+          "text": "{desc}",
+          "fontSize": 20,
+          "color": "$muted"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "{tagline}"
+        }
+      ]
+    },
+    "bullets": {
+      "name": "要点页",
+      "category": "content",
+      "description": "标题 + 编号圆要点列表（≤6 条）",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 60,
+          "y": 72,
+          "w": 140,
+          "h": 4,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "card_list_wide",
+          "x": 100,
+          "start_y": 110,
+          "item_h": 60,
+          "items": "{items}"
+        }
+      ]
+    },
+    "two_column": {
+      "name": "双栏",
+      "category": "content",
+      "description": "标题 + 左右两栏文本",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 60,
+          "y": 110,
+          "w": 410,
+          "h": 360,
+          "text": "{left}",
+          "fontSize": 20,
+          "color": "$text",
+          "lineHeight": 1.5
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 475,
+          "y": 110,
+          "w": 2,
+          "h": 360,
+          "fill": {
+            "color": "$line"
+          }
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 490,
+          "y": 110,
+          "w": 410,
+          "h": 360,
+          "text": "{right}",
+          "fontSize": 20,
+          "color": "$text",
+          "lineHeight": 1.5
+        }
+      ]
+    },
+    "three_column": {
+      "name": "三栏",
+      "category": "content",
+      "description": "标题 + 三栏卡片（cards_2x3 单行变体）",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "cards_2x3",
+          "x": 60,
+          "y": 110,
+          "w": 840,
+          "h": 260,
+          "items": "{items}",
+          "gap": 24
+        }
+      ]
+    },
+    "kpi_grid": {
+      "name": "KPI 统计卡",
+      "category": "content",
+      "description": "4 列大数字统计卡（cards_1x4_info）",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "cards_1x4_info",
+          "x": 60,
+          "y": 120,
+          "w": 840,
+          "h": 150,
+          "items": "{items}"
+        },
+        {
+          "type": "cards_2x3",
+          "x": 60,
+          "y": 310,
+          "w": 840,
+          "h": 190,
+          "items": "{cards}",
+          "gap": 18
+        }
+      ]
+    },
+    "timeline": {
+      "name": "时间轴",
+      "category": "content",
+      "description": "标题 + 编号圆纵向时间轴（card_list_wide 变体）",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 115,
+          "y": 110,
+          "w": 4,
+          "h": 340,
+          "fill": {
+            "color": "$line"
+          }
+        },
+        {
+          "type": "card_list_wide",
+          "x": 100,
+          "start_y": 110,
+          "item_h": 70,
+          "items": "{items}"
+        }
+      ]
+    },
+    "comparison": {
+      "name": "对比表",
+      "category": "content",
+      "description": "标题 + 对比表格",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "table",
+          "x": 60,
+          "y": 110,
+          "w": 840,
+          "h": 340,
+          "rows": "{rows}",
+          "cols": "{cols}",
+          "data": "{data}",
+          "header_color": "$ink"
+        }
+      ]
+    },
+    "chart_page": {
+      "name": "图表页",
+      "category": "content",
+      "description": "标题 + 原生柱状图 + 要点",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "chart",
+          "x": 60,
+          "y": 100,
+          "w": 560,
+          "h": 380,
+          "data": {
+            "rows": "{rows}"
+          },
+          "color": "$green"
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 650,
+          "y": 100,
+          "w": 250,
+          "h": 360,
+          "text": "{notes}",
+          "fontSize": 18,
+          "color": "$text",
+          "lineHeight": 1.5
+        }
+      ]
+    },
+    "image_hero": {
+      "name": "图题页",
+      "category": "content",
+      "description": "标题 + 大图 + 说明",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "{title}",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "image",
+          "x": 60,
+          "y": 100,
+          "w": 840,
+          "h": 340,
+          "file": "{image}"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 460,
+          "w": 840,
+          "h": 30,
+          "text": "{caption}",
+          "fontSize": 14,
+          "color": "$muted",
+          "align": "center"
+        }
+      ]
+    },
+    "thanks": {
+      "name": "致谢",
+      "category": "close",
+      "description": "居中大字致谢 + Q&A",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 180,
+          "w": 840,
+          "h": 90,
+          "text": "{title}",
+          "fontSize": 52,
+          "color": "$text",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 290,
+          "w": 840,
+          "h": 40,
+          "text": "{subtitle}",
+          "fontSize": 24,
+          "color": "$muted",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "{tagline}"
+        }
+      ]
+    }
+  }
+}

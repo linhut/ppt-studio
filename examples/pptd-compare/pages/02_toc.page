@@ -1,0 +1,147 @@
+id: "02_toc"
+pageType: "toc"
+background:
+  color: "#caf0f8"   # $bg 内联
+elements:
+  - elementType: "text"
+    bounds: [48, 14, 300, 18]
+    content:
+      text: "<p><span style='color:#0077b6'>CONTENTS · 目录</span></p>"
+      align: ["left", "middle"]
+  - elementType: "text"
+    bounds: [48, 36, 864, 42]
+    content:
+      text: "<p>今天的内容</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [48, 86, 48, 3]
+    fill: { type: "solid", color: "$accent" }
+  # 6 卡网格：3 列 × 2 行（cw=272, chh=164, gap=24）
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 110, 272, 164]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [48, 110, 272, 3]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [64, 130, 240, 24]
+    content:
+      text: "<p>01 · 三源融合</p>"
+      align: ["left", "middle"]
+      style: "$card-title"
+  - elementType: "text"
+    bounds: [64, 160, 240, 90]
+    content:
+      text: "<p>三家 skill 各自专长，取长补短</p>"
+      align: ["left", "top"]
+      style: "$card-desc"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [344, 110, 272, 164]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [344, 110, 272, 3]
+    fill: { type: "solid", color: "$green" }
+  - elementType: "text"
+    bounds: [360, 130, 240, 24]
+    content:
+      text: "<p>02 · 设计系统</p>"
+      align: ["left", "middle"]
+      style: "$card-title"
+  - elementType: "text"
+    bounds: [360, 160, 240, 90]
+    content:
+      text: "<p>字号层级 / 间距 / 圆角真实值</p>"
+      align: ["left", "top"]
+      style: "$card-desc"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [640, 110, 272, 164]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [640, 110, 272, 3]
+    fill: { type: "solid", color: "$primary" }
+  - elementType: "text"
+    bounds: [656, 130, 240, 24]
+    content:
+      text: "<p>03 · 双引擎</p>"
+      align: ["left", "middle"]
+      style: "$card-title"
+  - elementType: "text"
+    bounds: [656, 160, 240, 90]
+    content:
+      text: "<p>PPTD 经典 + JSON 数据驱动</p>"
+      align: ["left", "top"]
+      style: "$card-desc"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 298, 272, 164]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [48, 298, 272, 3]
+    fill: { type: "solid", color: "$brass" }
+  - elementType: "text"
+    bounds: [64, 318, 240, 24]
+    content:
+      text: "<p>04 · 复合组件</p>"
+      align: ["left", "middle"]
+      style: "$card-title"
+  - elementType: "text"
+    bounds: [64, 348, 240, 90]
+    content:
+      text: "<p>卡片 / 统计卡 / 目录列表</p>"
+      align: ["left", "top"]
+      style: "$card-desc"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [344, 298, 272, 164]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [344, 298, 272, 3]
+    fill: { type: "solid", color: "$green" }
+  - elementType: "text"
+    bounds: [360, 318, 240, 24]
+    content:
+      text: "<p>05 · 质量闭环</p>"
+      align: ["left", "middle"]
+      style: "$card-title"
+  - elementType: "text"
+    bounds: [360, 348, 240, 90]
+    content:
+      text: "<p>5 维度审查 + 硬约束校验</p>"
+      align: ["left", "top"]
+      style: "$card-desc"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [640, 298, 272, 164]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [640, 298, 272, 3]
+    fill: { type: "solid", color: "$accent" }
+  - elementType: "text"
+    bounds: [656, 318, 240, 24]
+    content:
+      text: "<p>06 · 路线图</p>"
+      align: ["left", "middle"]
+      style: "$card-title"
+  - elementType: "text"
+    bounds: [656, 348, 240, 90]
+    content:
+      text: "<p>接下来做什么，怎么演进</p>"
+      align: ["left", "top"]
+      style: "$card-desc"

@@ -1,0 +1,894 @@
+{
+  "canvas": {
+    "w": 960,
+    "h": 540
+  },
+  "theme": {
+    "colors": {
+      "$bg": "#FFFFFF",
+      "$paper": "#F5F8FC",
+      "$primary": "#1F4E79",
+      "$accent": "#2E75B6",
+      "$text": "#2D2D2D",
+      "$muted": "#777777",
+      "$line": "#D8E2EC",
+      "$ink": "#1F4E79",
+      "$green": "#1E7B4F",
+      "$brass": "#B08D2E"
+    }
+  },
+  "slides": [
+    {
+      "id": "01",
+      "title": "封面",
+      "background": {
+        "type": "gradient",
+        "stops": [
+          {
+            "color": "$ink"
+          },
+          {
+            "color": "$accent"
+          }
+        ],
+        "angle": 135
+      },
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 96,
+          "y": 130,
+          "w": 768,
+          "h": 26,
+          "align": "center",
+          "text": "市 场 研 究 · 探 索 与 分 析",
+          "fontSize": 14,
+          "color": "#A0BBDD",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 80,
+          "y": 175,
+          "w": 800,
+          "h": 76,
+          "align": "center",
+          "text": "常山北明（000158）",
+          "fontSize": 48,
+          "color": "#FFFFFF",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 96,
+          "y": 265,
+          "w": 768,
+          "h": 40,
+          "align": "center",
+          "text": "市场行情与研究分析",
+          "fontSize": 24,
+          "color": "#CADCFC",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "muted",
+          "x": 96,
+          "y": 330,
+          "w": 768,
+          "h": 30,
+          "align": "center",
+          "text": "探索性研究报告 · 数据截至 2026-09-03 收盘",
+          "fontSize": 13,
+          "color": "#7BAFD4"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "color": "$accent",
+          "text": "研究目的：梳理行情脉络 · 拆解财务结构 · 识别概念驱动与风险"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "目录",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "探索框架",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "研究路径",
+          "fontSize": 36,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_2x3",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 352,
+          "gap": 24,
+          "items": [
+            {
+              "title": "01 · 公司画像",
+              "desc": "从纺织到 IT 服务的转型路径",
+              "color": "$primary"
+            },
+            {
+              "title": "02 · 行情速览",
+              "desc": "关键交易指标一页看全",
+              "color": "$accent"
+            },
+            {
+              "title": "03 · 走势复盘",
+              "desc": "52 周区间与近期资金异动",
+              "color": "$primary"
+            },
+            {
+              "title": "04 · 财务透视",
+              "desc": "三年营收与盈利质量拆解",
+              "color": "$accent"
+            },
+            {
+              "title": "05 · 业务结构",
+              "desc": "低毛利集成与高毛利定制的平衡",
+              "color": "$primary"
+            },
+            {
+              "title": "06 · 概念与风险",
+              "desc": "信创/AI 概念驱动与风险提示",
+              "color": "$accent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "公司画像",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "一、公司画像",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "纺织龙头转型 IT 服务，软件已成绝对主业",
+          "fontSize": 36,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_2x3",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 352,
+          "gap": 24,
+          "items": [
+            {
+              "title": "历史沿革",
+              "desc": "老牌纺织企业，2015 年重组引入北明软件",
+              "color": "$primary"
+            },
+            {
+              "title": "主业结构",
+              "desc": "软件业务占比 100%，纺织已基本剥离",
+              "color": "$accent"
+            },
+            {
+              "title": "核心产品",
+              "desc": "系统集成 / 行业解决方案 / 定制软件",
+              "color": "$primary"
+            },
+            {
+              "title": "生态合作",
+              "desc": "华为 ICT 产品经销与解决方案长期伙伴（公开行业认知）",
+              "color": "$accent"
+            },
+            {
+              "title": "概念标签",
+              "desc": "信创 · AI 应用 · 智谱 AI · 数据要素（东财板块）",
+              "color": "$primary"
+            },
+            {
+              "title": "市场身份",
+              "desc": "深股通 · 融资融券 · 标普/富时成分 · 河北板块",
+              "color": "$accent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "行情速览",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "二、行情速览",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "总市值 217 亿，动态市盈率为负",
+          "fontSize": 36,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "kpi_row",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 150,
+          "gap": 18,
+          "items": [
+            {
+              "num": "13.57",
+              "label": "最新价（元）",
+              "delta": "-1.74%",
+              "color": "$primary"
+            },
+            {
+              "num": "216.9",
+              "label": "总市值（亿元）",
+              "delta": "流通 215.9",
+              "color": "$accent"
+            },
+            {
+              "num": "8.15",
+              "label": "成交额（亿元）",
+              "delta": "换手 3.72%",
+              "color": "$primary"
+            },
+            {
+              "num": "4.13",
+              "label": "市净率（PB）",
+              "delta": "PE 动 为负",
+              "color": "$brass"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 48,
+          "y": 300,
+          "w": 864,
+          "h": 150,
+          "text": "9 月 3 日高开低走收 13.57 元，振幅 3.91%，量比 1.10。动态市盈率-95.65 反映当前盈利为负；市净率 4.13 倍，估值中枢由概念预期支撑。",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.6
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "走势复盘",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "三、走势复盘",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "一年回撤近五成，9 月初放量涨停反弹",
+          "fontSize": 32,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "figure_text",
+          "x": 48,
+          "y": 100,
+          "w": 864,
+          "h": 360,
+          "figure_ratio": 0.55,
+          "figure_title": "图 1 · 近一年日 K 走势（复权）",
+          "figure_placeholder": "[ 图表占位：K 线图，标注 52 周高低点 ]",
+          "heading": "关键观察",
+          "points": [
+            {
+              "lead": "52 周区间",
+              "text": "28.34（2025-08-26）→ 11.92（2026-07-21）"
+            },
+            {
+              "lead": "累计跌幅",
+              "text": "近 250 日约 -47.9%"
+            },
+            {
+              "lead": "近期异动",
+              "text": "9/1 涨停 +10.06% 放量 12.7 亿；9/3 收 13.57"
+            },
+            {
+              "lead": "当前位置",
+              "text": "区间中下部，距高点回撤约 52%"
+            }
+          ],
+          "source": "东方财富日 K 线，前复权（2025-08-25 至 2026-09-03）",
+          "point_color": "$primary"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "财务透视",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "四、财务透视",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "2025 扭亏 0.33 亿，2026 上半年再度转亏",
+          "fontSize": 32,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "table",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 200,
+          "rows": 4,
+          "cols": 4,
+          "header_color": "$primary",
+          "data": [
+            [
+              "报告期",
+              "营业收入",
+              "归母净利",
+              "同比观察"
+            ],
+            [
+              "2024 年报",
+              "88.18 亿",
+              "-5.93 亿",
+              "收入高基数"
+            ],
+            [
+              "2025 年报",
+              "75.38 亿",
+              "+0.33 亿",
+              "收入 -14.5%"
+            ],
+            [
+              "2026 中报",
+              "36.97 亿",
+              "-1.13 亿",
+              "由盈转亏"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 48,
+          "y": 330,
+          "w": 864,
+          "h": 130,
+          "text": "2024 年计提减值致巨亏 5.93 亿；2025 年降本扭亏仅微利 0.33 亿；2026 上半年营收同比基本持平，但亏损扩大至 1.13 亿，盈利质量仍待验证。",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.6
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "业务结构",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "五、业务结构",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "七成收入靠低毛利集成，定制软件是毛利担当",
+          "fontSize": 30,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "figure_text",
+          "x": 48,
+          "y": 100,
+          "w": 864,
+          "h": 360,
+          "figure_ratio": 0.5,
+          "figure_title": "图 2 · 2026 中报软件业务构成（36.97 亿）",
+          "figure_placeholder": "[ 图表占位：占比环形图 82.7% / 14.1% / 1.6% ]",
+          "heading": "结构解读",
+          "points": [
+            {
+              "lead": "系统集成",
+              "text": "82.7% 营收，毛利率仅 7.95%"
+            },
+            {
+              "lead": "定制软件",
+              "text": "14.1% 营收，毛利率 24.7%"
+            },
+            {
+              "lead": "整体毛利",
+              "text": "10.73%，集成模式拉低利润"
+            },
+            {
+              "lead": "结构含义",
+              "text": "高毛利业务占比有待提升"
+            }
+          ],
+          "source": "东方财富 F10 主营构成（2026-06-30）",
+          "point_color": "$primary"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "概念与催化",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "六、概念与催化",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "信创 + AI 双主线，概念溢价明显",
+          "fontSize": 32,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "cards_2x3",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 352,
+          "gap": 24,
+          "items": [
+            {
+              "title": "信创国产化",
+              "desc": "行业信创订单放量，政务/央国企客户",
+              "color": "$primary"
+            },
+            {
+              "title": "AI 应用落地",
+              "desc": "东财 AI 应用板块成分，智能化场景集成",
+              "color": "$accent"
+            },
+            {
+              "title": "智谱 AI 概念",
+              "desc": "智谱生态合作预期（概念标签）",
+              "color": "$primary"
+            },
+            {
+              "title": "华为产业链",
+              "desc": "ICT 经销与解决方案生态（公开认知）",
+              "color": "$accent"
+            },
+            {
+              "title": "政策催化",
+              "desc": "数据要素、数字化转型政策红利",
+              "color": "$primary"
+            },
+            {
+              "title": "资金属性",
+              "desc": "融资融券/深股通标的，题材资金易进出",
+              "color": "$accent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "风险与展望",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "七、风险与展望",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "盈利持续性、毛利结构与概念波动三重风险",
+          "fontSize": 30,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "checklist",
+          "x": 48,
+          "y": 100,
+          "w": 864,
+          "h": 190,
+          "items": [
+            {
+              "text": "盈利持续风险：2026H1 再度亏损，全年扭亏存在不确定性",
+              "done": false
+            },
+            {
+              "text": "毛利结构风险：集成占比 82.7% 且毛利率不足 8%",
+              "done": false
+            },
+            {
+              "text": "概念波动风险：涨停后高位分歧，题材退潮或剧烈回撤",
+              "done": false
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 48,
+          "y": 330,
+          "w": 864,
+          "h": 130,
+          "text": "展望：转型方向确定，观察华为/AI 生态订单落地与定制软件占比提升；估值（PB 4.13）已含较多预期，需业绩兑现支撑。",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.6
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "研究小结",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "研究小结",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "转型方向确定，盈利与估值匹配度待验证",
+          "fontSize": 30,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 340,
+          "text": "1. 公司已完成从纺织到 IT 服务的转型，软件业务收入占比 100%，方向清晰。\n2. 行情层面：52 周回撤 47.9% 后于 9 月初放量反弹，短期由信创/AI 概念与资金情绪驱动。\n3. 财务层面：2025 年扭亏但 2026H1 转亏，整体毛利率 10.73%，盈利质量偏弱。\n4. 估值层面：PB 4.13 倍、动态 PE 为负，价格领先基本面，需订单与利润兑现。\n5. 跟踪要点：定制软件占比、华为/AI 生态订单、季度亏损收窄节奏。",
+          "fontSize": 16,
+          "color": "$text",
+          "lineHeight": 1.7
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "数据来源与声明",
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 48,
+          "y": 14,
+          "w": 300,
+          "h": 18,
+          "text": "附 · 数据说明",
+          "fontSize": 12,
+          "color": "$accent",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 48,
+          "y": 36,
+          "w": 864,
+          "h": 42,
+          "text": "数据来源与免责声明",
+          "fontSize": 32,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 48,
+          "y": 86,
+          "w": 48,
+          "h": 3,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "references",
+          "x": 48,
+          "y": 110,
+          "w": 864,
+          "h": 300,
+          "items": [
+            "行情数据：腾讯/新浪/东方财富行情接口（2026-09-03 收盘）",
+            "财务数据：东方财富 F10 主要财务指标与主营构成（2024-2026 中报）",
+            "概念板块：东方财富核心题材（信创 / AI 应用 / 智谱 AI 等）",
+            "华为生态信息来自公开行业认知，请以公司公告为准",
+            "本报告仅供研究参考，不构成任何投资建议；市场有风险，投资需谨慎"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "结语",
+      "background": {
+        "type": "gradient",
+        "stops": [
+          {
+            "color": "$accent"
+          },
+          {
+            "color": "$ink"
+          }
+        ],
+        "angle": 45
+      },
+      "elements": [
+        {
+          "type": "text",
+          "role": "kicker",
+          "x": 96,
+          "y": 130,
+          "w": 768,
+          "h": 24,
+          "align": "center",
+          "text": "探索 · 研究 · 跟踪",
+          "fontSize": 14,
+          "color": "#A0BBDD",
+          "bold": true
+        },
+        {
+          "type": "big_quote",
+          "x": 110,
+          "y": 170,
+          "w": 740,
+          "h": 200,
+          "quote": "看懂行情背后的业务与估值，比追逐涨停更重要。",
+          "author": "常山北明研究笔记 · 2026-09"
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "x": 96,
+          "y": 400,
+          "w": 768,
+          "h": 36,
+          "align": "center",
+          "text": "数据截至 2026-09-03 · 仅供研究参考，不构成投资建议",
+          "fontSize": 13,
+          "color": "#7BAFD4"
+        }
+      ]
+    }
+  ]
+}

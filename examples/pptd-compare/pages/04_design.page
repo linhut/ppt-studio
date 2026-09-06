@@ -1,0 +1,151 @@
+id: "04_design"
+pageType: "content"
+background:
+  color: "#caf0f8"
+elements:
+  - elementType: "text"
+    bounds: [48, 14, 400, 18]
+    content:
+      text: "<p><span style='color:#0077b6'>DESIGN SYSTEM · 真实值</span></p>"
+      align: ["left", "middle"]
+  - elementType: "text"
+    bounds: [48, 36, 864, 42]
+    content:
+      text: "<p>设计规范（来自三家源码）</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "rect"
+    bounds: [48, 86, 48, 3]
+    fill: { type: "solid", color: "$accent" }
+  # 4 统计卡（cw≈202, gap=18）
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 110, 202, 140]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [54, 122, 190, 60]
+    content:
+      text: "<p style='text-align:center'>54pt</p>"
+      align: ["center", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [54, 196, 190, 36]
+    content:
+      text: "<p style='text-align:center'>封面标题</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [268, 110, 202, 140]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [274, 122, 190, 60]
+    content:
+      text: "<p style='text-align:center'>36pt</p>"
+      align: ["center", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [274, 196, 190, 36]
+    content:
+      text: "<p style='text-align:center'>页面标题</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [488, 110, 202, 140]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [494, 122, 190, 60]
+    content:
+      text: "<p style='text-align:center'>14pt</p>"
+      align: ["center", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [494, 196, 190, 36]
+    content:
+      text: "<p style='text-align:center'>正文</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [708, 110, 202, 140]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [714, 122, 190, 60]
+    content:
+      text: "<p style='text-align:center'>12pt</p>"
+      align: ["center", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [714, 196, 190, 36]
+    content:
+      text: "<p style='text-align:center'>弱化文字</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  # 纯净科技蓝 5 色色带
+  - elementType: "text"
+    bounds: [48, 272, 400, 30]
+    content:
+      text: "<p>纯净科技蓝 · 五色</p>"
+      align: ["left", "middle"]
+      style: "$h2"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [48, 320, 160, 70]
+    fill: { type: "solid", color: "#caf0f8" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [48, 392, 160, 24]
+    content:
+      text: "<p style='text-align:center'>#caf0f8</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [220, 320, 160, 70]
+    fill: { type: "solid", color: "#90e0ef" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [220, 392, 160, 24]
+    content:
+      text: "<p style='text-align:center'>#90e0ef</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [392, 320, 160, 70]
+    fill: { type: "solid", color: "#00b4d8" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [392, 392, 160, 24]
+    content:
+      text: "<p style='text-align:center'>#00b4d8</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [564, 320, 160, 70]
+    fill: { type: "solid", color: "#0077b6" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [564, 392, 160, 24]
+    content:
+      text: "<p style='text-align:center'>#0077b6</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [736, 320, 160, 70]
+    fill: { type: "solid", color: "#03045e" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [736, 392, 160, 24]
+    content:
+      text: "<p style='text-align:center'>#03045e</p>"
+      align: ["center", "middle"]
+      style: "$stat-label"

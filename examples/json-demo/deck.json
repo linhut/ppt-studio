@@ -1,0 +1,264 @@
+{
+  "_doc": "ppt-studio JSON 数据驱动示例：封面/KPI/路线图/致谢，展示复合组件与 $theme 变量。",
+  "canvas": {
+    "w": 960,
+    "h": 540
+  },
+  "theme": {
+    "colors": {
+      "$bg": "#0F1423",
+      "$paper": "#171E30",
+      "$primary": "#22D3EE",
+      "$accent": "#A78BFA",
+      "$ink": "#0F1423",
+      "$text": "#E5E9F0",
+      "$muted": "#8A93A6",
+      "$line": "#2A3350",
+      "$green": "#34D399",
+      "$brass": "#FBBF24"
+    }
+  },
+  "slides": [
+    {
+      "id": "01",
+      "title": "封面",
+      "elements": [
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": {
+            "color": "$primary"
+          }
+        },
+        {
+          "type": "shape",
+          "shapeName": "rect",
+          "x": 0,
+          "y": 532,
+          "w": 960,
+          "h": 8,
+          "fill": {
+            "color": "$accent"
+          }
+        },
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 120,
+          "w": 840,
+          "h": 90,
+          "text": "AI-PPT 演示",
+          "fontSize": 54,
+          "color": "$primary",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 230,
+          "w": 840,
+          "h": 40,
+          "text": "JSON 数据驱动引擎演示",
+          "fontSize": 22,
+          "color": "$text",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 280,
+          "w": 840,
+          "h": 30,
+          "text": "ppt-studio v2  |  2026",
+          "fontSize": 16,
+          "color": "$muted",
+          "align": "center",
+          "role": "caption"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "融合 harness-anything 风格的 JSON 驱动引擎"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "数据概览",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "关键指标",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "cards_1x4_info",
+          "x": 60,
+          "y": 120,
+          "w": 840,
+          "h": 140,
+          "items": [
+            {
+              "num": "18",
+              "label": "套配色"
+            },
+            {
+              "num": "31",
+              "label": "种布局"
+            },
+            {
+              "num": "9",
+              "label": "类元素"
+            },
+            {
+              "num": "5",
+              "label": "维审查"
+            }
+          ]
+        },
+        {
+          "type": "cards_2x3",
+          "x": 60,
+          "y": 300,
+          "w": 840,
+          "h": 200,
+          "items": [
+            {
+              "title": "JSON 驱动",
+              "desc": "canvas + slides + elements"
+            },
+            {
+              "title": "复合组件",
+              "desc": "卡片/统计卡/总结条"
+            },
+            {
+              "title": "设计预设",
+              "desc": "4 预设 + 18 配色"
+            },
+            {
+              "title": "质量审查",
+              "desc": "自动打分 + 硬约束"
+            },
+            {
+              "title": "原生 PPTX",
+              "desc": "python-pptx 跨平台"
+            },
+            {
+              "title": "淡入淡出",
+              "desc": "默认过渡动画"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "路线图",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 20,
+          "w": 840,
+          "h": 44,
+          "text": "开发路线",
+          "fontSize": 38,
+          "color": "$primary",
+          "bold": true
+        },
+        {
+          "type": "card_list_wide",
+          "x": 100,
+          "start_y": 110,
+          "item_h": 62,
+          "items": [
+            {
+              "num": "1",
+              "title": "设计架构",
+              "sub": "三来源融合：html-ppt 蓝图 + MiniMax 配色 + np-ppt 引擎"
+            },
+            {
+              "num": "2",
+              "title": "构建引擎",
+              "sub": "PPTD 经典 + JSON 数据驱动双引擎"
+            },
+            {
+              "num": "3",
+              "title": "质量闭环",
+              "sub": "自动审查 + 硬约束校验 + 人工复核清单"
+            }
+          ]
+        },
+        {
+          "type": "num_big",
+          "x": 60,
+          "y": 360,
+          "w": 200,
+          "h": 100,
+          "num": "03",
+          "label": "阶段交付",
+          "color": "$accent"
+        },
+        {
+          "type": "num_big",
+          "x": 380,
+          "y": 360,
+          "w": 200,
+          "h": 100,
+          "num": "26+",
+          "label": "交付文件",
+          "color": "$green"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "致谢",
+      "elements": [
+        {
+          "type": "text",
+          "role": "title",
+          "x": 60,
+          "y": 180,
+          "w": 840,
+          "h": 90,
+          "text": "谢谢观看",
+          "fontSize": 52,
+          "color": "$text",
+          "bold": true,
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "x": 60,
+          "y": 290,
+          "w": 840,
+          "h": 40,
+          "text": "Q & A",
+          "fontSize": 24,
+          "color": "$muted",
+          "align": "center"
+        },
+        {
+          "type": "tagline_bar",
+          "y": 498,
+          "text": "ppt-studio — PPT 全能工坊"
+        }
+      ]
+    }
+  ]
+}

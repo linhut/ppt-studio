@@ -1,0 +1,64 @@
+{
+  "canvas": {"w": 960, "h": 540},
+  "theme": {"colors": {
+    "$bg": "#FFFFFF", "$paper": "#F5F8FC", "$primary": "#1F4E79",
+    "$accent": "#2E75B6", "$text": "#2D2D2D", "$muted": "#777777",
+    "$line": "#D8E2EC", "$ink": "#1F4E79", "$green": "#1E7B4F", "$brass": "#B08D2E"
+  }},
+  "slides": [
+    {"id": "01", "title": "封面",
+     "background": {"type": "gradient", "stops": [{"color": "$ink"}, {"color": "$accent"}], "angle": 135},
+     "elements": [
+       {"type": "text", "role": "kicker", "x": 96, "y": 140, "w": 768, "h": 24,
+        "text": "研究汇报 · 2025", "fontSize": 13, "color": "#A0BBDD", "bold": true, "align": "center"},
+       {"type": "text", "role": "title", "x": 80, "y": 180, "w": 800, "h": 90,
+        "text": "早期干预对成年收入的影响", "fontSize": 40, "color": "#FFFFFF", "bold": true, "align": "center"},
+       {"type": "text", "role": "body", "x": 96, "y": 300, "w": 768, "h": 50,
+        "text": "一项 1200 名儿童的 35 年追踪研究", "fontSize": 18, "color": "#CADCFC", "align": "center"},
+       {"type": "tagline_bar", "y": 498, "color": "$accent",
+        "text": "行动标题原则：本页标题即研究结论的引子"}
+     ]},
+    {"id": "02", "title": "结果页",
+     "elements": [
+       {"type": "breadcrumb", "y": 0, "height": 30, "sections": ["动机", "数据", "方法", "结果", "讨论"], "active": 3,
+        "color": "$accent", "bar_bg": "$paper"},
+       {"type": "text", "role": "kicker", "x": 48, "y": 44, "w": 300, "h": 18,
+        "text": "四、结果", "fontSize": 12, "color": "$accent", "bold": true},
+       {"type": "text", "role": "title", "x": 48, "y": 64, "w": 864, "h": 56,
+        "text": "受干预儿童 35 岁时收入高出 18%", "fontSize": 32, "color": "$primary", "bold": true},
+       {"type": "shape", "shapeName": "rect", "x": 48, "y": 120, "w": 48, "h": 3, "fill": {"color": "$accent"}},
+       {"type": "figure_text", "x": 48, "y": 140, "w": 864, "h": 330,
+        "figure_ratio": 0.55,
+        "figure_title": "图 1 · 干预效应分位数（%）",
+        "figure_placeholder": "[ 图表占位：柱状图 Q1-Q4 效应 28/22/15/8 ]",
+        "heading": "核心发现",
+        "points": [
+          {"lead": "平均效应", "text": "收入提升 18%（p<0.001）"},
+          {"lead": "异质性", "text": "低收入组效应为高收入组 3.5 倍"},
+          {"lead": "精度", "text": "95% CI = [14%, 22%]"}
+        ],
+        "source": "行政收入记录，社保局（2024 年获取）",
+        "point_color": "$primary"}
+     ]},
+    {"id": "03", "title": "参考文献",
+     "elements": [
+       {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+        "text": "参考文献", "fontSize": 36, "color": "$primary", "bold": true},
+       {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3, "fill": {"color": "$accent"}},
+       {"type": "references", "x": 48, "y": 110, "w": 864, "h": 360,
+        "items": [
+          "Cunha, F. & Heckman, J.J. (2007). The Technology of Skill Formation. American Economic Review, 97(2), 31-47.",
+          "Heckman, J.J., Moon, S.H., Pinto, R., Savelyev, P.A., & Yavitz, A. (2013). The Rate of Return to the HighScope Perry Preschool Program. Journal of Public Economics, 94(1), 114-128.",
+          "Smith, J. & Doe, J. (2025). Long-Run Returns to Early Childhood Intervention. Working paper."
+        ]}
+     ]},
+    {"id": "04", "title": "结语",
+     "background": {"type": "gradient", "stops": [{"color": "$accent"}, {"color": "$ink"}], "angle": 45},
+     "elements": [
+       {"type": "text", "role": "title", "x": 96, "y": 190, "w": 768, "h": 80,
+        "text": "早期干预值得长期投入", "fontSize": 44, "color": "#FFFFFF", "bold": true, "align": "center"},
+       {"type": "text", "role": "body", "x": 96, "y": 300, "w": 768, "h": 40,
+        "text": "证据支持扩大覆盖范围 · 联系方式：jane@univ.edu", "fontSize": 16, "color": "#CADCFC", "align": "center"}
+     ]}
+  ]
+}

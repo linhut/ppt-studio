@@ -1,0 +1,27 @@
+{
+  "_doc": "ppt-studio 向导回答模板（SKILL.md「0. 向导式需求确认」的 5 问答案）。",
+  "topic": "ppt-studio 能力展示",
+  "structure": "full",
+  "palette": "15-pure-tech-blue",
+  "style": "soft",
+  "mode": "light",
+  "title": "ppt-studio v3",
+  "subtitle": "一次对话，产出原生 .pptx 文件",
+  "tocTitle": "今天的内容",
+  "tone": "corporate",
+  "outline": [
+    "三源融合",
+    "设计系统",
+    "双引擎",
+    "复合组件",
+    "质量闭环",
+    "路线图"
+  ],
+  "content_layouts": [
+    "cards",
+    "kpi",
+    "process",
+    "timeline",
+    "compare"
+  ]
+}

@@ -1,0 +1,80 @@
+id: "02_toc"
+pageType: "toc"
+background:
+  color: "#f0f8fc"
+elements:
+  - elementType: "text"
+    bounds: [40, 50, 400, 60]
+    content:
+      text: "<p>目录</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [40, 150, 260, 110]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [60, 168, 80, 40]
+    content:
+      text: "<p>01</p>"
+      align: ["left", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [115, 178, 180, 35]
+    content:
+      text: "<p>架构演进</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [60, 212, 220, 30]
+    content:
+      text: "<p>单体 → 多智能体</p>"
+      align: ["left", "middle"]
+      style: "$muted"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [320, 150, 260, 110]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [340, 168, 80, 40]
+    content:
+      text: "<p>02</p>"
+      align: ["left", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [395, 178, 180, 35]
+    content:
+      text: "<p>关键指标</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [340, 212, 220, 30]
+    content:
+      text: "<p>性能与成本</p>"
+      align: ["left", "middle"]
+      style: "$muted"
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [600, 150, 260, 110]
+    fill: { type: "solid", color: "$paper" }
+    border: { style: "solid", color: "$line", width: 1 }
+  - elementType: "text"
+    bounds: [620, 168, 80, 40]
+    content:
+      text: "<p>03</p>"
+      align: ["left", "middle"]
+      style: "$stat"
+  - elementType: "text"
+    bounds: [675, 178, 180, 35]
+    content:
+      text: "<p>路线图</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [620, 212, 220, 30]
+    content:
+      text: "<p>未来规划</p>"
+      align: ["left", "middle"]
+      style: "$muted"

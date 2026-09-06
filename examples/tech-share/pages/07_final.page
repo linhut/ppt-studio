@@ -1,0 +1,25 @@
+id: "07_final"
+pageType: "final"
+background:
+  color: "#03045e"   # $ink 内联
+elements:
+  - elementType: "text"
+    bounds: [80, 160, 800, 100]
+    content:
+      text: "<p style='text-align:center'>谢谢</p>"
+      align: ["center", "middle"]
+      fontSize: 72
+      bold: true
+      color: "#ffffff"
+  - elementType: "text"
+    bounds: [80, 280, 800, 60]
+    content:
+      text: "<p style='text-align:center'><span style='color:#9dc8e8'>THANKS · Q&A</span></p>"
+      align: ["center", "middle"]
+      style: "$muted"
+  - elementType: "text"
+    bounds: [80, 400, 800, 60]
+    content:
+      text: "<p style='text-align:center'>zhangsan@example.com</p>"
+      align: ["center", "middle"]
+      style: "$muted"

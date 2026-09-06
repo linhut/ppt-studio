@@ -1,0 +1,33 @@
+id: "01_cover"
+pageType: "cover"
+background:
+  color: "#0a0a0a"          # 深色封面（$ink 内联；浅色主题可用 $bg 对应色值）
+elements:
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [80, 150, 800, 8]
+    fill: { type: "solid", color: "$brass" }
+  - elementType: "text"
+    bounds: [80, 60, 800, 40]
+    content:
+      text: "<p>SUB-TITLE · 2026</p>"
+      align: ["left", "middle"]
+      style: "$muted"
+  - elementType: "text"
+    bounds: [80, 180, 800, 80]
+    content:
+      text: "<p>主标题：一次汇报</p>"
+      align: ["left", "middle"]
+      style: "$cover-title"
+  - elementType: "text"
+    bounds: [80, 270, 800, 60]
+    content:
+      text: "<p><span style='color:#b0b7c3'>副标题：一句话概括本次汇报主题与目标</span></p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [80, 440, 800, 40]
+    content:
+      text: "<p>汇报人：姓名　|　2026-01-15</p>"
+      align: ["left", "middle"]
+      style: "$muted"

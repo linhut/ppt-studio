@@ -1,0 +1,173 @@
+{
+  "canvas": {"w": 960, "h": 540},
+  "theme": {
+    "colors": {
+      "$bg": "#FFFFFF",
+      "$paper": "#F7F5F0",
+      "$primary": "#A6192E",
+      "$accent": "#C8102E",
+      "$text": "#1A1A1A",
+      "$muted": "#6B7280",
+      "$line": "#E8E2D9",
+      "$ink": "#A6192E",
+      "$green": "#1E7B4F",
+      "$brass": "#8C6D1F"
+    }
+  },
+  "slides": [
+    {
+      "id": "01", "title": "封面",
+      "background": {"type": "gradient", "stops": [{"color": "$ink"}, {"color": "$accent"}], "angle": 135},
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 96, "y": 120, "w": 768, "h": 24,
+         "text": "工 作 汇 报 · 2025 年 1 月", "fontSize": 13, "color": "#F5E6C8", "bold": true, "align": "center"},
+        {"type": "text", "role": "title", "x": 96, "y": 160, "w": 768, "h": 70,
+         "text": "2024 年度工作总结", "fontSize": 54, "color": "#FFFFFF", "bold": true, "align": "center"},
+        {"type": "text", "role": "body", "x": 96, "y": 250, "w": 768, "h": 36,
+         "text": "凝心聚力 · 真抓实干 · 推动各项事业高质量发展", "fontSize": 18, "color": "#F7E7D0", "align": "center"},
+        {"type": "tagline_bar", "y": 498, "color": "$ink",
+         "text": "XX 单位 · 2024 年度工作总结"}
+      ]
+    },
+    {
+      "id": "02", "title": "汇报提纲",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "汇报提纲", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "会议议程", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "cards_2x3", "x": 48, "y": 110, "w": 864, "h": 352, "gap": 24,
+         "items": [
+           {"title": "01 · 总体情况", "desc": "统筹推进各项重点任务", "color": "$accent"},
+           {"title": "02 · 重点指标", "desc": "主要经济与民生指标完成情况", "color": "$primary"},
+           {"title": "03 · 主要举措", "desc": "四项机制保障工作落实", "color": "$accent"},
+           {"title": "04 · 存在问题", "desc": "短板弱项与改进方向", "color": "$primary"},
+           {"title": "05 · 下年计划", "desc": "四个季度压茬推进落实", "color": "$accent"},
+           {"title": "06 · 结语", "desc": "大道至简，实干为要", "color": "$primary"}
+         ]}
+      ]
+    },
+    {
+      "id": "03", "title": "总体情况",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "一、总体情况", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "统筹推进，年度任务全面落实", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "cards_2x3", "x": 48, "y": 110, "w": 864, "h": 352, "gap": 24,
+         "items": [
+           {"title": "坚持党建引领", "desc": "深入推进主题教育，强化政治机关建设", "color": "$accent"},
+           {"title": "聚焦主责主业", "desc": "年度目标任务全面完成，进展符合预期", "color": "$primary"},
+           {"title": "深化改革创新", "desc": "优化办事流程 12 项，压缩办理时限", "color": "$accent"},
+           {"title": "强化队伍建设", "desc": "开展业务培训，全面提升履职能力", "color": "$primary"},
+           {"title": "夯实基础管理", "desc": "完善制度体系，规范各项工作运行", "color": "$accent"},
+           {"title": "守牢安全底线", "desc": "全年未发生重大安全责任事故", "color": "$primary"}
+         ]}
+      ]
+    },
+    {
+      "id": "04", "title": "重点指标",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "二、重点指标", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "主要指标完成情况", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "kpi_row", "x": 48, "y": 110, "w": 864, "h": 150, "gap": 18,
+         "items": [
+           {"num": "5.2 亿", "label": "规上产值", "delta": "+12.3%", "color": "$primary"},
+           {"num": "38 个", "label": "重点项目", "delta": "完成率100%", "color": "$accent"},
+           {"num": "12.6 万", "label": "服务群众", "delta": "+8.5%", "color": "$primary"},
+           {"num": "98.2%", "label": "群众满意度", "delta": "+1.4pt", "color": "$green"}
+         ]},
+        {"type": "text", "role": "body", "x": 48, "y": 300, "w": 864, "h": 150,
+         "text": "主要经济指标稳中有进，重点项目建设提速增效，民生服务保障持续加力，各项工作达到年度预期目标。", "fontSize": 16, "color": "$text", "lineHeight": 1.6}
+      ]
+    },
+    {
+      "id": "05", "title": "主要举措",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "三、主要举措", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "四项机制保障落实", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "process_steps", "x": 48, "y": 130, "w": 864, "h": 300, "color": "$accent",
+         "steps": [
+           {"title": "部署启动", "desc": "制定方案，细化任务，明确责任"},
+           {"title": "统筹推进", "desc": "定期调度，协同联动，破解难题"},
+           {"title": "督查落实", "desc": "跟踪问效，通报进展，限期整改"},
+           {"title": "考核评估", "desc": "目标考核，结果运用，奖惩分明"}
+         ]}
+      ]
+    },
+    {
+      "id": "06", "title": "存在问题",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "四、存在问题", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "短板弱项客观存在", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "cards_1x4_info", "x": 48, "y": 110, "w": 864, "h": 150, "gap": 18,
+         "items": [
+           {"num": "3", "label": "创新成果转化率偏低", "color": "$primary"},
+           {"num": "2", "label": "高层次人才引进不足", "color": "$accent"},
+           {"num": "1", "label": "数据共享协同不畅", "color": "$primary"}
+         ]},
+        {"type": "text", "role": "body", "x": 48, "y": 300, "w": 864, "h": 160,
+         "text": "改进方向：坚持问题导向，健全长效机制，逐项整改销号，务求取得实效。", "fontSize": 16, "color": "$text", "lineHeight": 1.6}
+      ]
+    },
+    {
+      "id": "07", "title": "下年计划",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "五、下年计划", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "2025 年工作安排", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "roadmap_4col", "x": 48, "y": 120, "w": 864, "h": 320,
+         "columns": [
+           {"phase": "一季度", "items": ["谋篇布局", "制定年度计划", "细化任务清单"]},
+           {"phase": "二季度", "items": ["全面推进", "重点项目开工", "进度过半"]},
+           {"phase": "三季度", "items": ["攻坚冲刺", "破解难点堵点", "补齐短板"]},
+           {"phase": "四季度", "items": ["总结提升", "全面收官", "考核评估"]}
+         ]}
+      ]
+    },
+    {
+      "id": "08", "title": "结语",
+      "elements": [
+        {"type": "text", "role": "kicker", "x": 48, "y": 14, "w": 300, "h": 18,
+         "text": "六、结语", "fontSize": 12, "color": "$accent", "bold": true},
+        {"type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 42,
+         "text": "结语", "fontSize": 36, "color": "$primary", "bold": true},
+        {"type": "shape", "shapeName": "rect", "x": 48, "y": 86, "w": 48, "h": 3,
+         "fill": {"color": "$accent"}},
+        {"type": "big_quote", "x": 80, "y": 150, "w": 800, "h": 240,
+         "quote": "大道至简，实干为要。", "author": "2024 年度工作总结"}
+      ]
+    },
+    {
+      "id": "09", "title": "致谢",
+      "background": {"type": "gradient", "stops": [{"color": "$accent"}, {"color": "$ink"}], "angle": 45},
+      "elements": [
+        {"type": "text", "role": "title", "x": 96, "y": 180, "w": 768, "h": 84,
+         "text": "谢谢指导", "fontSize": 52, "color": "#FFFFFF", "bold": true, "align": "center"},
+        {"type": "text", "role": "body", "x": 96, "y": 290, "w": 768, "h": 36,
+         "text": "恳请各位领导、同志们批评指正", "fontSize": 18, "color": "#F7E7D0", "align": "center"},
+        {"type": "tagline_bar", "y": 498, "color": "$ink",
+         "text": "XX 单位 · 2024 年度工作总结"}
+      ]
+    }
+  ]
+}

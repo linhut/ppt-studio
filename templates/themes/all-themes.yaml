@@ -1,0 +1,264 @@
+# 18 套配色 → PPTD theme.colors 合集（机器可读）
+# 使用：复制对应编号的 colors 块到 deck.deck.pptd 的 theme.colors。
+# 详细说明见 references/themes.md。
+themes:
+  "1-modern-health":
+    name: 现代与健康
+    colors:
+      $bg: "#edf6f9"
+      $paper: "#ffffff"
+      $primary: "#006d77"
+      $accent: "#e29578"
+      $text: "#00363a"
+      $muted: "#6b8f94"
+      $line: "#cfe0e3"
+      $ink: "#006d77"
+      $green: "#83c5be"
+      $brass: "#ffddd2"
+  "2-business-authority":
+    name: 商务与权威
+    colors:
+      $bg: "#edf2f4"
+      $paper: "#ffffff"
+      $primary: "#2b2d42"
+      $accent: "#ef233c"
+      $text: "#2b2d42"
+      $muted: "#8d99ae"
+      $line: "#d7dde3"
+      $ink: "#2b2d42"
+      $green: "#4a7c59"
+      $brass: "#8d99ae"
+  "3-nature-outdoor":
+    name: 自然与户外
+    colors:
+      $bg: "#fefae0"
+      $paper: "#ffffff"
+      $primary: "#283618"
+      $accent: "#bc6c25"
+      $text: "#283618"
+      $muted: "#8a7d5f"
+      $line: "#e8e0c4"
+      $ink: "#283618"
+      $green: "#606c38"
+      $brass: "#dda15e"
+  "4-retro-academy":
+    name: 复古与学院
+    colors:
+      $bg: "#fdf0d5"
+      $paper: "#ffffff"
+      $primary: "#780000"
+      $accent: "#669bbc"
+      $text: "#2c2c2c"
+      $muted: "#8a8a8a"
+      $line: "#e5d5b0"
+      $ink: "#780000"
+      $green: "#3a5a40"
+      $brass: "#c1121f"
+  "5-soft-creative":
+    name: 柔美与创意
+    colors:
+      $bg: "#fdf7ff"
+      $paper: "#ffffff"
+      $primary: "#b5838d"
+      $accent: "#a2d2ff"
+      $text: "#3a3a4a"
+      $muted: "#9a8f9f"
+      $line: "#eadcf0"
+      $ink: "#6d597a"
+      $green: "#9ec5ab"
+      $brass: "#ffc8dd"
+  "6-bohemian":
+    name: 波西米亚
+    colors:
+      $bg: "#fefae0"
+      $paper: "#ffffff"
+      $primary: "#6b705c"
+      $accent: "#d4a373"
+      $text: "#4a4a3a"
+      $muted: "#9a9484"
+      $line: "#eae2c8"
+      $ink: "#6b705c"
+      $green: "#a3b18a"
+      $brass: "#ccd5ae"
+  "7-vibrant-tech":
+    name: 活力与科技
+    colors:
+      $bg: "#ffffff"
+      $paper: "#f2f8fb"
+      $primary: "#023047"
+      $accent: "#fb8500"
+      $text: "#023047"
+      $muted: "#6c7f8d"
+      $line: "#dce8ef"
+      $ink: "#023047"
+      $green: "#219ebc"
+      $brass: "#ffb703"
+  "8-craftsmanship":
+    name: 匠心与手作
+    colors:
+      $bg: "#ede0d4"
+      $paper: "#ffffff"
+      $primary: "#414833"
+      $accent: "#7f5539"
+      $text: "#33302b"
+      $muted: "#8f8578"
+      $line: "#dccfc0"
+      $ink: "#414833"
+      $green: "#656d4a"
+      $brass: "#a68a64"
+  "9-tech-night":
+    name: 科技与夜景
+    colors:
+      $bg: "#000814"
+      $paper: "#001d3d"
+      $primary: "#ffc300"
+      $accent: "#ffd60a"
+      $text: "#e8edf5"
+      $muted: "#7a8aa5"
+      $line: "#123052"
+      $ink: "#003566"
+      $green: "#4cc9f0"
+      $brass: "#ffc300"
+  "10-education-chart":
+    name: 教育与图表
+    colors:
+      $bg: "#ffffff"
+      $paper: "#f4f9f8"
+      $primary: "#264653"
+      $accent: "#e76f51"
+      $text: "#264653"
+      $muted: "#6f8a93"
+      $line: "#dce5e8"
+      $ink: "#264653"
+      $green: "#2a9d8f"
+      $brass: "#e9c46a"
+  "11-forest-eco":
+    name: 森林与环保
+    colors:
+      $bg: "#f5f4ee"
+      $paper: "#ffffff"
+      $primary: "#344e41"
+      $accent: "#588157"
+      $text: "#344e41"
+      $muted: "#8a9384"
+      $line: "#dde2d6"
+      $ink: "#344e41"
+      $green: "#588157"
+      $brass: "#a3b18a"
+  "12-elegant-fashion":
+    name: 优雅与时尚
+    colors:
+      $bg: "#f7f1ed"
+      $paper: "#ffffff"
+      $primary: "#4a5759"
+      $accent: "#b0c4b1"
+      $text: "#3d4445"
+      $muted: "#8b8f8e"
+      $line: "#e5ded8"
+      $ink: "#4a5759"
+      $green: "#9db89f"
+      $brass: "#edafb8"
+  "13-art-food":
+    name: 艺术与美食
+    colors:
+      $bg: "#fdf6e8"
+      $paper: "#ffffff"
+      $primary: "#540b0e"
+      $accent: "#e09f3e"
+      $text: "#3a2020"
+      $muted: "#8c7a6a"
+      $line: "#e8dcc0"
+      $ink: "#540b0e"
+      $green: "#335c67"
+      $brass: "#9e2a2b"
+  "14-luxury-mystery":
+    name: 轻奢与神秘
+    colors:
+      $bg: "#f2e9e4"
+      $paper: "#ffffff"
+      $primary: "#22223b"
+      $accent: "#9a8c98"
+      $text: "#22223b"
+      $muted: "#8b8490"
+      $line: "#e0d7d0"
+      $ink: "#22223b"
+      $green: "#4a4e69"
+      $brass: "#c9ada7"
+  "15-pure-tech-blue":
+    name: 纯净科技蓝（harness 哲学版）
+    colors:
+      $bg: "#FFFFFF"
+      $paper: "#F5F7FA"
+      $primary: "#0B3D91"
+      $accent: "#2E6BB0"
+      $text: "#1A1A1A"
+      $muted: "#6B7280"
+      $line: "#E5E7EB"
+      $ink: "#0B3D91"
+      $green: "#1E7B4F"
+      $brass: "#A67C00"
+  "16-coast-coral":
+    name: 海岸珊瑚
+    colors:
+      $bg: "#fdfcdc"
+      $paper: "#ffffff"
+      $primary: "#0081a7"
+      $accent: "#f07167"
+      $text: "#1d3557"
+      $muted: "#7c9aa6"
+      $line: "#e4ece0"
+      $ink: "#0081a7"
+      $green: "#00afb9"
+      $brass: "#fed9b7"
+  "17-vibrant-orange-mint":
+    name: 活力橙薄荷
+    colors:
+      $bg: "#ffffff"
+      $paper: "#f5fbfa"
+      $primary: "#ff9f1c"
+      $accent: "#2ec4b6"
+      $text: "#1f2937"
+      $muted: "#94a3b8"
+      $line: "#e5e7eb"
+      $ink: "#ff9f1c"
+      $green: "#2ec4b6"
+      $brass: "#ffbf69"
+  "18-platinum-white-gold":
+    name: 铂金白金
+    colors:
+      $bg: "#f5f5f5"
+      $paper: "#ffffff"
+      $primary: "#0a0a0a"
+      $accent: "#0070F3"
+      $text: "#1f2937"
+      $muted: "#737373"
+      $line: "#e5e5e5"
+      $ink: "#0a0a0a"
+      $green: "#10B981"
+      $brass: "#D4AF37"
+  "19-gov-ceremonial":
+    name: 政务庄重（中国红）
+    colors:
+      $bg: "#FFFFFF"
+      $paper: "#F7F5F0"
+      $primary: "#A6192E"
+      $accent: "#C8102E"
+      $text: "#1A1A1A"
+      $muted: "#6B7280"
+      $line: "#E8E2D9"
+      $ink: "#A6192E"
+      $green: "#1E7B4F"
+      $brass: "#8C6D1F"
+  "20-academic-navy":
+    name: 学术深蓝（academic-pptx 三色克制）
+    colors:
+      $bg: "#FFFFFF"
+      $paper: "#F5F8FC"
+      $primary: "#1F4E79"
+      $accent: "#2E75B6"
+      $text: "#2D2D2D"
+      $muted: "#777777"
+      $line: "#D8E2EC"
+      $ink: "#1F4E79"
+      $green: "#1E7B4F"
+      $brass: "#B08D2E"

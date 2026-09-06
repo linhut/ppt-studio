@@ -1,0 +1,33 @@
+id: "01_cover"
+pageType: "cover"
+background:
+  color: "#03045e"   # $ink 内联
+elements:
+  - elementType: "shape"
+    shapeName: "roundRect"
+    bounds: [80, 150, 800, 8]
+    fill: { type: "solid", color: "$brass" }
+  - elementType: "text"
+    bounds: [80, 60, 800, 40]
+    content:
+      text: "<p>TECH SHARING · 2026</p>"
+      align: ["left", "middle"]
+      style: "$muted"
+  - elementType: "text"
+    bounds: [80, 180, 800, 80]
+    content:
+      text: "<p>AI 助手架构实践</p>"
+      align: ["left", "middle"]
+      style: "$cover-title"
+  - elementType: "text"
+    bounds: [80, 270, 800, 60]
+    content:
+      text: "<p><span style='color:#9dc8e8'>从单体到多智能体的演进之路</span></p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [80, 440, 800, 40]
+    content:
+      text: "<p>架构组 · 张三　|　2026-01-15</p>"
+      align: ["left", "middle"]
+      style: "$muted"

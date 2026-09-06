@@ -1,0 +1,14 @@
+{
+  "_doc": "政务风格年度工作总结：government 公文体 + 19 号政务庄重配色",
+  "topic": "2024 年度工作总结",
+  "structure": "full",
+  "palette": "19-gov-ceremonial",
+  "style": "soft",
+  "mode": "light",
+  "tone": "government",
+  "title": "2024 年度工作总结",
+  "subtitle": "凝心聚力 · 真抓实干 · 推动各项事业高质量发展",
+  "tocTitle": "汇报提纲",
+  "outline": ["总体情况", "重点指标", "主要举措", "存在问题", "下年计划", "结语"],
+  "content_layouts": ["cards", "kpi", "process", "timeline", "roadmap"]
+}

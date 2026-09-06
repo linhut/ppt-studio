@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 预览与产物（非代码，不提交）
+preview/
+preview2/
+preview3/
+preview4/
+*.pptx
+*.png
+*.gif
+*.PNG
+
+# 本地导出辅助脚本（含本机绝对路径，不公开）
+examples/*/_export.ps1
+
+# 参考素材（来源项目副本，不公开）
+references/sources-gorden/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

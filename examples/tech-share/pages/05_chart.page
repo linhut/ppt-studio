@@ -1,0 +1,31 @@
+id: "05_chart"
+pageType: "content"
+background:
+  color: "#f0f8fc"   # $bg 内联
+elements:
+  - elementType: "text"
+    bounds: [40, 50, 600, 60]
+    content:
+      text: "<p>性能关键指标</p>"
+      align: ["left", "middle"]
+      style: "$title"
+  - elementType: "chart"
+    bounds: [60, 140, 560, 340]
+    data:
+      rows:
+        - ["Q1", 0, 28]
+        - ["Q2", 0, 41]
+        - ["Q3", 0, 57]
+        - ["Q4", 0, 73]
+  - elementType: "text"
+    bounds: [660, 150, 260, 40]
+    content:
+      text: "<p>结论</p>"
+      align: ["left", "middle"]
+      style: "$h3"
+  - elementType: "text"
+    bounds: [660, 200, 260, 200]
+    content:
+      text: "<p>吞吐量全年提升 <strong>160%</strong>，核心路径延迟降低 45%。</p><p style='margin-top:16px'>多智能体并行带来显著收益。</p>"
+      align: ["left", "top"]
+      style: "$body"
