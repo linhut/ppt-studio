@@ -1,5 +1,5 @@
 <!--
-  (c) 2026 Jose AI (https://www.linhut.cn)
+  (c) 2026 Jose AI (https://github.com/linhut/ppt-studio)
   https://github.com/linhut/ppt-studio
   Licensed under the MIT License. See the LICENSE file for details.
 -->
@@ -135,8 +135,8 @@ ppt-studio/
 
 ## 许可
 
-- 仓库整体：**MIT License**，Copyright (c) 2026 **Jose AI**（https://www.linhut.cn），见 [LICENSE](LICENSE)
-- 作者信息标注：所有代码/文档文件头部标注 `(c) 2026 Jose AI (https://www.linhut.cn)`；
+- 仓库整体：**MIT License**，Copyright (c) 2026 **Jose AI**（https://github.com/linhut/ppt-studio），见 [LICENSE](LICENSE)
+- 作者信息标注：所有代码/文档文件头部标注 `(c) 2026 Jose AI (https://github.com/linhut/ppt-studio)`；
   `SKILL.md` 通过 frontmatter `metadata` 声明；数据/模板文件（`.json`/`.page`/`.yaml`/`.pptd`）
   为保证解析安全不加注释，版权由本 LICENSE 统一声明
 - 第三方组件许可证随附保留：编译内核 `scripts/export_pptx.py`（MIT），

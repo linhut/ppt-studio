@@ -5,7 +5,7 @@ whenToUse: "用户要求制作/优化演示文稿，或需要配色、排版、�
 disable-model-invocation: false
 user-invocable: true
 metadata:
-  author: "Jose AI (https://www.linhut.cn)"
+  author: "Jose AI (https://github.com/linhut/ppt-studio)"
   repository: "https://github.com/linhut/ppt-studio"
   license: "MIT"
 ---

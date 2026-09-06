@@ -1,5 +1,5 @@
 <!--
-  (c) 2026 Jose AI (https://www.linhut.cn)
+  (c) 2026 Jose AI (https://github.com/linhut/ppt-studio)
   https://github.com/linhut/ppt-studio
   Licensed under the MIT License. See the LICENSE file for details.
 -->
@@ -20,7 +20,7 @@
 - **发布纪律**：
   - 仅同步代码/文档/模板文本；图片、PPTX 产物、预览截图、本地导出脚本（`_export.ps1`）、`__pycache__` 等一律不提交（见 `.gitignore` 与 `RELEASING.md`）
   - 干净 git 历史，主分支 `main`，tag 格式 `vX.Y.Z`，GitHub Release 编号与 tag 一致
-- **作者信息**：所有代码/文档文件标注 `(c) 2026 Jose AI (https://www.linhut.cn)`，仓库统一按 MIT License 授权（第三方编译内核 `scripts/LICENSE.np-ppt` 随附保留）
+- **作者信息**：所有代码/文档文件标注 `(c) 2026 Jose AI (https://github.com/linhut/ppt-studio)`，仓库统一按 MIT License 授权（第三方编译内核 `scripts/LICENSE.np-ppt` 随附保留）
 
 ### Notes
 

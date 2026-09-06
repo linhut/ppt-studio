@@ -1,5 +1,5 @@
 <!--
-  (c) 2026 Jose AI (https://www.linhut.cn)
+  (c) 2026 Jose AI (https://github.com/linhut/ppt-studio)
   https://github.com/linhut/ppt-studio
   Licensed under the MIT License. See the LICENSE file for details.
 -->
