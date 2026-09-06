@@ -1,6 +1,6 @@
 ---
 name: ppt-studio
-description: "PPT 全能工坊 — 一站式生成原生 .pptx 演示文稿。当用户要求做PPT、演示文稿、幻灯片、汇报、演讲稿、路演、pitch deck 或配色排版时使用。融合 html-ppt 设计蓝图、Color Scheme 18 套配色、dsh-np-ppt 的 PPTD DSL 与 Python-PPTX 编译内核、harness-anything JSON 数据驱动引擎。产出原生 PPTX（形状/文本框/图表/表格/淡入淡出），不是网页。Triggers: PPT, pptx, 演示, 幻灯片, 演讲稿, 汇报, 路演, 分享, deck, slides, presentation, 配色方案, 排版, keynotes."
+description: "PPT 全能工坊 — 一站式生成原生 .pptx 演示文稿。当用户要求做PPT、演示文稿、幻灯片、汇报、演讲稿、路演、pitch deck 或配色排版时使用。内置 PPTD DSL 与 JSON 双引擎、20 套配色、18 个复合组件、Python-PPTX 高保真编译内核。产出原生 PPTX（形状/文本框/图表/表格/淡入淡出），不是网页。Triggers: PPT, pptx, 演示, 幻灯片, 演讲稿, 汇报, 路演, 分享, deck, slides, presentation, 配色方案, 排版, keynotes."
 whenToUse: "用户要求制作/优化演示文稿，或需要配色、排版、演讲逐字稿、原生 PPTX 交付时使用。仅当用户明确要求 HTML 网页演示或非 PPTX 格式时不用。"
 disable-model-invocation: false
 user-invocable: true
@@ -13,7 +13,6 @@ metadata:
 # ppt-studio — PPT 全能工坊
 
 **目标**：把「设计思路」与「生成引擎」合二为一，一次对话产出**原生 .pptx 文件**。
-设计蓝图来自 html-ppt / Color Scheme - PPT / dsh-np-ppt / harness-anything / academic-pptx-skill / deckary 六套体系（来源与许可见 [README.md](README.md)）。
 
 **产出物**：`deck/deck.pptx` —— 原生 PowerPoint 文件（16:9，960×540pt 画布，微软雅黑，noAutofit，纯色背景，可选淡入淡出过渡）。不是 HTML，不是网页。
 
@@ -223,14 +222,14 @@ JSON 结构与全部元素类型见 [references/json-engine.md](references/json-
 - PPTD 路径可与 55173 所见即所得编辑器联动；JSON 路径为纯命令行
 - 背景内联仅在 PPTD 路径需要；JSON 引擎可直接用 `$theme` 变量与渐变
 - 本 skill 不修改现有文件、不新增服务；复制到 `~/.dsh/skills/ppt-studio` 即部署
-- 来源与许可（html-ppt / Color Scheme / dsh-np-ppt / harness-anything / academic-pptx-skill / deckary）见 [README.md](README.md) 与 [scripts/LICENSE.np-ppt](scripts/LICENSE.np-ppt)
+- 许可与第三方组件许可证见 [README.md](README.md) 与 [scripts/LICENSE.np-ppt](scripts/LICENSE.np-ppt)
 
 ## 参考文件索引
 
 - [references/palettes.md](references/palettes.md) — 20 套配色 + 色阶 + 透明度 + 字体规范
 - [references/themes.md](references/themes.md) — 配色 → theme 变量映射 + 风格配方（圆角/间距）
 - [references/layouts.md](references/layouts.md) — 31 类页面布局配方
-- [references/animations.md](references/animations.md) — 动画思路（html-ppt 27 CSS 动画 → PPTX 过渡/入场效果）
+- [references/animations.md](references/animations.md) — 动画思路（27 类 CSS 动画 → PPTX 过渡/入场效果）
 - [references/pptd.md](references/pptd.md) — PPTD DSL 完整语法参考
 - [references/json-engine.md](references/json-engine.md) — JSON 引擎参考（元素/复合组件/预设/审查）
 - [references/layout-catalog.md](references/layout-catalog.md) — 布局样式库：18 个复合组件速查 + 按页面角色选布局

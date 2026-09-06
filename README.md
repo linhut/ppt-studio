@@ -5,19 +5,10 @@
 -->
 # ppt-studio — PPT 全能工坊 (DSH Skill)
 
+> `PPT` · `PPTX` · `Presentation` · `Deck` · `DSH Skill` · `Python` · `PPTD`
+
 一站式生成**原生 .pptx 演示文稿**的 DSH 技能：融合多套设计体系的设计思路，
 把「设计蓝图」与「生成引擎」合二为一，产出真正的 PowerPoint 文件（不是网页）。
-
-## 设计来源
-
-| 来源 | 借鉴什么 |
-|---|---|
-| **html-ppt**（[lewislulu/html-ppt-skill](https://github.com/lewislulu/html-ppt-skill)，MIT） | token 设计系统、36 主题思路、31 类布局、动画分类、演讲者逐字稿模式 |
-| **Color Scheme - PPT**（[MiniMax-AI/skills](https://github.com/MiniMax-AI/skills/tree/main/plugins/pptx-plugin/skills/color-font-skill)） | 18 套专业配色 + 设计系统色阶/透明度 + 中英文字体规范 |
-| **dsh-np-ppt**（[z953218350/dsh-np-ppt](https://github.com/z953218350/dsh-np-ppt)，MIT） | PPTD DSL、Python-PPTX 高保真编译内核、淡入淡出过渡 |
-| **harness-anything**（[yb2460/harness-anything](https://github.com/yb2460/harness-anything)，MIT） | JSON 数据驱动 + 元素类型路由器 + 复合组件 + 设计预设 + 5 维度质量审查 |
-| **academic-pptx-skill**（[Gabberflast/academic-pptx-skill](https://github.com/Gabberflast/academic-pptx-skill)） | 学术 11 模式：行动标题 / 结果页 / 面包屑 / 参考文献 / 三色克制配色 |
-| **deckary**（[deckary.com](https://deckary.com/blog/pillar-powerpoint-design-guide)） | 咨询级排版纪律：对齐/对比/留白 15-20%/一致性/层级 + 字号规范 |
 
 ## 双引擎
 
@@ -82,7 +73,7 @@ ppt-studio/
 │   ├── palettes.md             # 20 套配色 + 色阶 + 透明度 + 字体规范
 │   ├── themes.md               # 配色 → theme 变量映射 + 风格配方
 │   ├── layouts.md              # 31 类页面布局配方
-│   ├── animations.md           # html-ppt 动画思路 → PPTX 方案
+│   ├── animations.md           # 动画思路 → PPTX 方案
 │   ├── pptd.md                 # PPTD DSL 语法参考
 │   ├── json-engine.md          # JSON 引擎参考（元素/复合组件/预设/审查）
 │   ├── layout-catalog.md       # 18 个复合组件速查 + 布局选择指南
@@ -148,7 +139,5 @@ ppt-studio/
 - 作者信息标注：所有代码/文档文件头部标注 `(c) 2026 Jose AI (https://www.linhut.cn)`；
   `SKILL.md` 通过 frontmatter `metadata` 声明；数据/模板文件（`.json`/`.page`/`.yaml`/`.pptd`）
   为保证解析安全不加注释，版权由本 LICENSE 统一声明
-- 第三方组件许可证随附保留：编译内核 `scripts/export_pptx.py`（源自 dsh-np-ppt，
-  MIT © 2026 z953218350），见 [scripts/LICENSE.np-ppt](scripts/LICENSE.np-ppt)
-- 设计思路来源致谢（非作者署名）：html-ppt / Color Scheme - PPT / harness-anything /
-  academic-pptx-skill / deckary，详见上方「设计来源」表
+- 第三方组件许可证随附保留：编译内核 `scripts/export_pptx.py`（MIT），
+  见 [scripts/LICENSE.np-ppt](scripts/LICENSE.np-ppt)
