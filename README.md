@@ -26,10 +26,16 @@
 - 🎨 **18 套成品配色 + 4 大设计预设**（academic/consultant/business/tech），见 `references/themes.md`、`scripts/presets.py`
 - 📐 **31 类页面布局配方 + 12 个 JSON 布局模板**（封面/目录/KPI/时间轴/对比/图表/致谢…）
 - 🧩 **PPTD DSL**：YAML 清单 + 模块化 .page，一页一文件，16:9（960×540pt）画布
-- ⚡ **高保真编译**：微软雅黑、noAutofit、富文本、表格、图表、淡入淡出
+- ⚡ **高保真编译**：微软雅黑、noAutofit、富文本、表格、图表（bar/line/pie/radar/stacked/scatter 多系列）、淡入淡出
 - 🔀 **元素路由器**：text/image/chart/table/shape + cards_2x3/cards_1x4_info/card_list_wide/tagline_bar/num_big
-- 🧪 **质量审查**：5 维度自动打分 + 硬约束校验（越界/间距/字数/视觉占比）
+- 🧪 **质量审查**：5 维度自动打分 + 硬约束校验（越界/间距/字数/视觉占比），`--html` 输出可视化报告
 - 🗣️ **演讲者逐字稿**：每页 150–300 字口语化讲稿（notes 字段）
+- 🛠️ **统一命令行** `ppt`：build/export/check/render/presets/doctor/new/wizard/md2deck/validate/pptx2json，一条命令覆盖全流程
+- 📝 **Markdown 大纲入口**：`ppt md2deck` 把大纲直接转成 deck（数字型条目自动 KPI 布局）
+- 🔁 **PPTX 反向导入**：`ppt pptx2json` 把现有 PPTX 的矢量结构回填成 deck.json（模板复用）
+- ✅ **Schema 校验**：`ppt validate` 输出 JSONPath + 行号定位的修复清单
+- 🧰 **环境预检**：`ppt doctor` 检查依赖 / PowerPoint / LibreOffice 渲染通道
+- 🧪 **单测 + CI**：pytest 黄金结构单测 + GitHub Actions（tests/、.github/workflows/ci.yml）
 
 ## 快速开始（PPTD 路径）
 
@@ -58,7 +64,24 @@ py -3 scripts/quality_check.py my-deck/deck.json --preset tech
 py -3 scripts/presets.py list
 ```
 
-> 依赖：Python 3 + `pyyaml` + `python-pptx`（编译器首次运行自动 pip 安装）。
+> 依赖：Python 3 + `pyyaml` + `python-pptx`（编译器首次运行自动 pip 安装；也可 `pip install -r requirements.txt` 一次性装齐）。
+
+## 统一命令行入口（推荐）
+
+```bash
+# 一条命令覆盖全流程（等价于各脚本直调，参数原样透传）
+ppt doctor                        # 环境预检：依赖 / PowerPoint / LibreOffice
+ppt new my-deck --theme tech --pages 8   # 脚手架：生成 8 页 deck.json 骨架
+ppt md2deck outline.md -o my-deck/deck.json --theme tech   # Markdown 大纲 → deck
+ppt build my-deck/deck.json -o my-deck/deck.pptx --strict  # JSON → PPTX
+ppt export my-deck/deck.deck.pptd --output my-deck/deck.pptx --force  # PPTD → PPTX
+ppt check my-deck/deck.json --preset tech --auto-only --html   # 审查 + HTML 报告
+ppt validate my-deck/deck.json    # schema 校验（JSONPath + 行号定位）
+ppt pptx2json my-deck/deck.pptx -o my-deck/deck.json   # PPTX 反向导入
+ppt presets list                  # 查预设
+```
+
+Windows 用 `ppt.bat`，macOS/Linux 用 `./ppt.sh`（或直接 `python scripts/ppt.py <子命令>`）。
 
 ## 目录结构
 
@@ -89,13 +112,26 @@ ppt-studio/
 │       ├── deck.json           # JSON 引擎模板骨架
 │       └── layout-templates.json  # 12 个布局模板（占位符式）
 ├── scripts/
+│   ├── ppt.py                  # 统一命令行入口（ppt，推荐）
+│   ├── doctor.py               # 环境预检（ppt doctor）
+│   ├── new_project.py          # 新 deck 脚手架（ppt new）
+│   ├── wizard_interactive.py   # 交互式向导（ppt wizard）
+│   ├── md2deck.py              # Markdown 大纲 → deck.json（ppt md2deck）
+│   ├── validate.py             # deck.json schema 校验（ppt validate）
+│   ├── pptx2json.py            # PPTX → deck.json 反向导入（ppt pptx2json）
+│   ├── json2pptx.py            # JSON → PPTX 引擎（复合组件 + 渐变 + fade）
 │   ├── export_pptx.py          # PPTD → PPTX 编译内核（第三方内核，随附 LICENSE.np-ppt）
 │   ├── inline_bg.py            # $theme 背景色自动内联
-│   ├── json2pptx.py            # JSON → PPTX 引擎（复合组件 + 渐变 + fade）
 │   ├── presets.py              # 设计预设（4 大 + 18 配色加载）
-│   ├── quality_check.py        # 质量审查（5 维度 + 硬约束）
+│   ├── quality_check.py        # 质量审查（5 维度 + 硬约束 + --html 报告）
+│   ├── render_check.py         # 渲染级检查（PowerPoint COM / LibreOffice 兜底）
 │   ├── wizard.py               # answers.json → deck.json 骨架生成
+│   ├── test_render_check.py    # 渲染检查自测
 │   └── LICENSE.np-ppt          # 编译内核许可证（第三方）
+├── tests/                      # pytest 单测（黄金结构 + 工具集成）
+├── .github/workflows/ci.yml    # GitHub Actions CI（单测 + 双引擎冒烟）
+├── requirements.txt            # 依赖清单（pip install -r requirements.txt）
+├── ppt.bat / ppt.sh            # 统一 CLI 启动器（Windows / macOS·Linux）
 └── examples/                   # 示例（仅代码/数据文本；预览图与 PPTX 产物不公开）
     ├── tech-share/             # PPTD 完整示例（7 页）
     ├── pptd-compare/           # PPTD 对比演示（6 页）

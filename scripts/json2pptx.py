@@ -142,6 +142,7 @@ class Builder:
         self.base_dir = base_dir
         self.colors = data.get("theme", {}).get("colors", {})
         self.text_styles = data.get("theme", {}).get("textStyles", {})
+        self.fonts = data.get("theme", {}).get("fonts", {})
         canvas = data.get("canvas", {})
         self.cw = float(canvas.get("w", 960))
         self.ch = float(canvas.get("h", 540))
@@ -162,6 +163,16 @@ class Builder:
 
     def text_style(self, name):
         return self.text_styles.get(name, {}) if name else {}
+
+    def font_for(self, role, override=None):
+        """字体解析：元素 font > theme.fonts[角色组] > 默认（中文雅黑 / 英文 Arial）。"""
+        if override:
+            return override
+        group = ("stat" if role == "stat" else
+                 ("heading" if role in ("title", "h3", "h4", "kicker") else "body"))
+        if group == "stat":
+            return self.fonts.get("stat", FONT_STAT)
+        return self.fonts.get(group, FONT_CN)
 
     def add_box(self, slide, x, y, w, h):
         return slide.shapes.add_textbox(self.emu(x), self.emu(y), self.emu(w), self.emu(h))
@@ -238,7 +249,7 @@ class Builder:
         self.put_text(tf, e.get("text", ""), fs, self.col(color),
                       bold=bool(e.get("bold", role in ("title", "h3", "h4", "stat", "kicker"))),
                       align=align_map.get(align_s, PP_ALIGN.LEFT),
-                      font=e.get("font", FONT_EN if role == "stat" else FONT_CN),
+                      font=self.font_for(role, e.get("font")),
                       line_spacing=float(e.get("lineHeight", style.get("lineHeight", LINE_HEIGHT))))
         return box
 
@@ -263,6 +274,7 @@ class Builder:
                                     self.emu(w), self.emu(h))
         table = gf.table
         hdr = self.col(e.get("header_color", "$ink"), "1F2A24")
+        cell_font = self.font_for("body") if not self.fonts.get("table") else self.fonts["table"]
         for r in range(rows):
             for c in range(cols):
                 cell = table.cell(r, c)
@@ -276,7 +288,7 @@ class Builder:
                     for run in p.runs:
                         run.font.size = Pt(FS_TABLE_HEAD if r == 0 else FS_TABLE_CELL)
                         run.font.bold = bool(r == 0)
-                        run.font.name = FONT_CN
+                        run.font.name = cell_font
                         run.font.color.rgb = rgb_of("FFFFFF" if r == 0 else "333333")
                 cell.fill.solid()
                 cell.fill.fore_color.rgb = rgb_of(hdr if r == 0 else ("FFFFFF" if r % 2 == 0 else "F5F0ED"))
@@ -290,20 +302,61 @@ class Builder:
         rows = e.get("data", {}).get("rows", e.get("rows", []))
         if not rows:
             return
-        chart_data = CategoryChartData()
-        chart_data.categories = [str(r[0]) for r in rows]
-        chart_data.add_series("数值", [float(r[2]) for r in rows])
-        gf = slide.shapes.add_chart(XL_CHART_TYPE.COLUMN_CLUSTERED,
-                                    self.emu(e["x"]), self.emu(e["y"]),
-                                    self.emu(e["w"]), self.emu(e["h"]), chart_data)
+        ctype = str(e.get("chartType", "bar")).lower()
+        x, y, w, h = e["x"], e["y"], e["w"], e.get("h", 380)
+
+        def num(v):
+            try:
+                return float(v)
+            except (TypeError, ValueError):
+                return None
+
+        if ctype == "scatter":
+            from pptx.chart.data import XyChartData
+            xd = XyChartData()
+            points = []
+            for r in rows:
+                if len(r) >= 3 and num(r[1]) is not None and num(r[2]) is not None:
+                    points.append((num(r[1]), num(r[2])))
+            if not points:
+                return
+            xd.add_series("散点", points)
+            gf = slide.shapes.add_chart(XL_CHART_TYPE.XY_SCATTER,
+                                        self.emu(x), self.emu(y), self.emu(w), self.emu(h), xd)
+        else:
+            # 数值列检测：跳过「单位」类非数值列（兼容 [分类, 单位, 值] 旧格式）
+            series_spec = []
+            for j in range(1, len(rows[0])):
+                vals = [num(r[j]) if j < len(r) else None for r in rows]
+                if all(v is not None for v in vals):
+                    series_spec.append((j, vals))
+            if not series_spec:
+                return
+            if ctype == "pie":
+                series_spec = series_spec[:1]
+            chart_data = CategoryChartData()
+            chart_data.categories = [str(r[0]) for r in rows]
+            for idx, (_, vals) in enumerate(series_spec):
+                chart_data.add_series("数值" if len(series_spec) == 1 else "系列%d" % (idx + 1),
+                                      [v for v in vals])
+            xtype = {"line": XL_CHART_TYPE.LINE_MARKERS,
+                     "pie": XL_CHART_TYPE.PIE,
+                     "radar": XL_CHART_TYPE.RADAR,
+                     "stacked": XL_CHART_TYPE.COLUMN_STACKED,
+                     }.get(ctype, XL_CHART_TYPE.COLUMN_CLUSTERED)
+            gf = slide.shapes.add_chart(xtype,
+                                        self.emu(x), self.emu(y), self.emu(w), self.emu(h), chart_data)
         chart = gf.chart
         try:
             chart.legend.position = XL_LEGEND_POSITION.BOTTOM
             chart.legend.include_in_layout = False
-            series = chart.plots[0].series[0]
-            series.format.fill.solid()
-            series.format.fill.fore_color.rgb = rgb_of(self.col(e.get("color", "$green"), "00AFB9"))
-            series.has_data_labels = True
+            series_colors = ["$green", "$accent", "$primary", "$brass"]
+            for idx, series in enumerate(chart.plots[0].series):
+                series.format.fill.solid()
+                series.format.fill.fore_color.rgb = rgb_of(
+                    self.col(e.get("color", series_colors[idx % len(series_colors)])))
+            if len(chart.plots[0].series) == 1:
+                chart.plots[0].series[0].has_data_labels = True
         except Exception:
             pass
 
@@ -418,7 +471,7 @@ class Builder:
         bar.line.fill.background()
         tb = self.add_box(slide, x + 10, y + 3, w - 20, h - 6)
         self.put_text(tb.text_frame, e.get("text", ""), FS_TAGLINE, "FFFFFF",
-                      bold=True, align=PP_ALIGN.CENTER, font=FONT_CN)
+                      bold=True, align=PP_ALIGN.CENTER, font=self.fonts.get("tagline", FONT_CN))
 
     def add_num_big(self, slide, e):
         """大数字 + 标签（三段式 40/10/50，design-system）。"""
@@ -427,10 +480,10 @@ class Builder:
         nb = self.add_box(slide, x, y, w, num_h)
         self.put_text(nb.text_frame, str(e.get("num", "")),
                       float(e.get("fs", FS_STAT)), self.col(e.get("color", "$accent")),
-                      bold=True, align=PP_ALIGN.CENTER, font=FONT_STAT)
+                      bold=True, align=PP_ALIGN.CENTER, font=self.font_for("stat"))
         lb = self.add_box(slide, x, y + num_h + gap, w, lbl_h)
         self.put_text(lb.text_frame, str(e.get("label", "")), FS_MUTED,
-                      self.col("$muted", "888888"), align=PP_ALIGN.CENTER, font=FONT_CN)
+                      self.col("$muted", "888888"), align=PP_ALIGN.CENTER, font=self.font_for("body"))
 
         # ---------- 新增布局组件（html-ppt 31 布局 + MiniMax 页面生成器 + GordenPPTSkill 版式） ----------
     def add_section_divider(self, slide, e):

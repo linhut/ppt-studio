@@ -1,0 +1,15 @@
+# ppt-studio 依赖清单
+# (c) 2026 Jose AI (https://github.com/linhut/ppt-studio)
+# https://github.com/linhut/ppt-studio
+# Licensed under the MIT License. See the LICENSE file for details.
+
+# 运行依赖
+pyyaml>=6.0
+python-pptx>=1.0
+
+# 渲染级检查（scripts/render_check.py）
+Pillow>=10.0
+numpy>=1.26
+
+# 测试与开发
+pytest>=8.0

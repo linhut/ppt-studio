@@ -8,6 +8,12 @@ build/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
+
+# 本地临时与日志（非源码，不提交）
+_tmp/
+*.log
 
 # 预览与产物（非代码，不提交）
 preview/
@@ -18,6 +24,10 @@ preview4/
 *.png
 *.gif
 *.PNG
+
+# 渲染级检查产物（render_check.py 输出的 PNG + 临时 PS 脚本）
+_render_check/
+render_check_temp/
 
 # 本地导出辅助脚本（含本机绝对路径，不公开）
 examples/*/_export.ps1

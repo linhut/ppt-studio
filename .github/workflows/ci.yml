@@ -1,0 +1,46 @@
+# ppt-studio CI：单测 + 双引擎端到端冒烟
+# (c) 2026 Jose AI (https://github.com/linhut/ppt-studio)
+# https://github.com/linhut/ppt-studio
+# Licensed under the MIT License. See the LICENSE file for details.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest tests/ -v
+
+      - name: Doctor preflight
+        run: python scripts/ppt.py doctor
+
+      - name: Smoke build (JSON engine)
+        run: python scripts/ppt.py build examples/json-demo/deck.json -o /tmp/deck.pptx --no-fade
+
+      - name: Smoke check (quality gate)
+        run: python scripts/ppt.py check examples/json-demo/deck.json --preset tech --auto-only --html --html-out /tmp/report.html
+
+      - name: md2deck + validate smoke
+        run: |
+          printf '# record\n\n## 章节一\n- 要点A\n' > /tmp/o.md
+          python scripts/ppt.py md2deck /tmp/o.md -o /tmp/o.json --theme tech
+          python scripts/ppt.py validate /tmp/o.json

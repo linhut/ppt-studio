@@ -162,14 +162,16 @@ py -3 scripts/export_pptx.py deck/deck.pptd --output deck/deck.pptx --force
 数据驱动 / 批量 / Agent 自动生成时，跳过 PPTD 工程，用单文件 JSON：
 
 1. 从 [templates/json/deck.json](templates/json/deck.json) 复制骨架，或从 [templates/json/layout-templates.json](templates/json/layout-templates.json) 挑布局模板粘贴 elements
-2. 配色直接引用预设名（4 大预设 + 18 套配色），背景/填充/文字可写 `$primary` 等变量（本引擎自行解析，无内联限制），背景还支持渐变
+2. 配色直接引用预设名（4 大预设 + 18 套配色），背景/填充/文字可写 `$primary` 等变量（本引擎自行解析，无内联限制），背景还支持渐变；字体可用 `theme.fonts` 配置（heading/body/stat/table/tagline），图表可用 `chartType`（bar/line/pie/radar/stacked/scatter 多系列）
 3. 用复合组件表达数据（18 个，速查见 [references/layout-catalog.md](references/layout-catalog.md)）：`table` / `chart` / `cards_2x3` / `cards_1x4_info` / `card_list_wide` / `kpi_row` / `num_big` / `tagline_bar` / `section_divider` / `comparison_2col` / `pros_cons` / `timeline_h` / `process_steps` / `roadmap_4col` / `checklist` / `big_quote` / `cover_asym` / `figure_text` / `breadcrumb` / `references`
-4. 编译 + 质量审查：
+4. 编译 + 质量审查（推荐走统一 CLI `ppt`，脚本直调亦可）：
 
 ```bash
-py -3 scripts/json2pptx.py deck/deck.json --output deck/deck.pptx        # 淡入淡出
-py -3 scripts/quality_check.py deck/deck.json --preset tech --auto-only  # 自动打分
-py -3 scripts/presets.py list                                            # 查预设
+ppt build deck.json -o deck.pptx --strict                  # 编辑（淡入淡出）
+ppt check deck.json --preset tech --auto-only              # 自动打分
+ppt check deck.json --preset tech --auto-only --html       # HTML 审查报告（deck.quality.html）
+ppt validate deck.json                                     # schema 校验（JSONPath + 行号）
+ppt presets list                                           # 查预设
 ```
 
 JSON 结构与全部元素类型见 [references/json-engine.md](references/json-engine.md)。
@@ -179,7 +181,15 @@ JSON 结构与全部元素类型见 [references/json-engine.md](references/json-
 1. `python -m markitdown deck/deck.pptx` 提取全部文本，核对内容/顺序/错别字
 2. 检查占位符：`... | grep -iE "xxxx|lorem|ipsum|placeholder|TODO"`
 3. 逐页核对：配色是否严格来自主题变量、文字是否越界/重叠、图表数据是否正确
-4. 至少完成一轮「发现问题→修复→再验证」循环，再交付
+4. **渲染级检查（推荐）**：把 deck 真实渲染成图做像素级检测，能抓静态估算看不见的问题——文字被实体遮挡、元素超出画布被裁剪、页面过密/过空（PowerPoint COM 优先，无 PowerPoint 时自动用 LibreOffice headless 兜底）：
+   ```bash
+   ppt render my-deck/deck.json            # 编译+渲染+检测（完整报告）
+   ppt render my-deck/deck.pptx            # 直接检测已有 pptx
+   ppt render my-deck/deck.json --strict   # 有未达标页时退出码 1（CI 可用）
+   ppt check my-deck/deck.json --preset tech --auto-only --render  # 静态+渲染合并审查
+   ppt check my-deck/deck.json --preset tech --auto-only --html    # 可视化报告（含渲染缩略图）
+   ```
+5. `ppt validate my-deck/deck.json` 先做 schema 校验（JSONPath + 行号定位），再至少完成一轮「发现问题→修复→再验证」循环，再交付
 
 ---
 
@@ -203,7 +213,7 @@ JSON 结构与全部元素类型见 [references/json-engine.md](references/json-
 | 淡入淡出 | 默认 `--transition fade`，需要静态可加 `--transition none` |
 | JSON 引擎例外 | JSON 路径背景/填充/文字可直接用 `$theme` 变量，支持渐变与复合组件；PPTD 路径仍须内联背景 |
 
-**编译前自检**：跑 `py -3 scripts/quality_check.py deck.json --preset <配色>` 检查容量溢出、越界、字号层级、颜色数；有「容量溢出」警告时先精简措辞，不要用省略号截断。
+**编译前自检**：跑 `py -3 scripts/quality_check.py deck.json --preset <配色>` 检查容量溢出、越界、字号层级、颜色数；有「容量溢出」警告时先精简措辞，不要用省略号截断。交付前若本机装有 PowerPoint，加跑 `py -3 scripts/render_check.py deck.json --strict` 做渲染级复核（抓文字被遮挡、元素超出画布被裁剪等静态看不见的问题）。
 
 ## 反模式
 
@@ -221,6 +231,7 @@ JSON 结构与全部元素类型见 [references/json-engine.md](references/json-
 - 命令统一用 `py -3`（Windows）或 `python3`（macOS/Linux）；依赖缺失时编译器自动安装
 - PPTD 路径可与 55173 所见即所得编辑器联动；JSON 路径为纯命令行
 - 背景内联仅在 PPTD 路径需要；JSON 引擎可直接用 `$theme` 变量与渐变
+- 渲染级检查 `render_check.py` 需要本机安装 Microsoft PowerPoint（COM 渲染）或 LibreOffice（soffice 兜底，需 `pip install pymupdf`）+ Pillow/numpy；两者都没有时自动跳过（仅警告不失败）
 - 本 skill 不修改现有文件、不新增服务；复制到 `~/.dsh/skills/ppt-studio` 即部署
 - 许可与第三方组件许可证见 [README.md](README.md) 与 [scripts/LICENSE.np-ppt](scripts/LICENSE.np-ppt)
 

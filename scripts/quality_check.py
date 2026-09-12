@@ -29,6 +29,7 @@ import argparse
 import json
 import math
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -317,6 +318,10 @@ def main(argv=None):
     parser.add_argument("--preset", default="academic", help="设计预设名（academic/consultant/business/tech 或 18 配色 key）")
     parser.add_argument("--json", action="store_true", help="输出 JSON 报告")
     parser.add_argument("--auto-only", action="store_true", help="只跑自动检查，跳过人工复核清单")
+    parser.add_argument("--html", action="store_true", help="输出 HTML 审查报告（含缩略图，若已渲染）")
+    parser.add_argument("--html-out", type=Path, default=None, help="HTML 报告输出路径（默认 <deck>.quality.html）")
+    parser.add_argument("--render", action="store_true",
+                        help="静态检查后追加渲染级复核（PowerPoint COM 渲染 + 像素检测，需本机安装 PowerPoint）")
     args = parser.parse_args(argv)
 
     if not args.input.is_file():
@@ -329,7 +334,14 @@ def main(argv=None):
 
     report = review_deck(data, preset)
 
+    # ---- 渲染级复核（可选）----
+    render_result = None
+    if args.render:
+        render_result = run_render_check(args.input)
+
     if args.json:
+        if render_result is not None:
+            report["render_check"] = render_result
         print(json.dumps(report, ensure_ascii=False, indent=2))
     else:
         print(report["summary"])
@@ -346,9 +358,137 @@ def main(argv=None):
                     print("  [ ] %s（阈值 %d 分）" % (n, th))
         else:
             print("（--auto-only 已跳过人工复核清单）")
+        if render_result is not None:
+            _print_render_result(render_result)
         if report["overall_score"] < 70:
             return 1
+        # 渲染级存在 fail 页时也返回非零（仅 --render 且渲染可用时）
+        if render_result is not None and render_result.get("render_failed"):
+            return 1
+
+    if args.html:
+        html_path = args.html_out or args.input.with_name(args.input.stem + ".quality.html")
+        render_html_report(report, render_result, html_path, args.input, args.auto_only)
+        print("HTML 审查报告 → %s" % html_path)
     return 0
+
+
+def run_render_check(deck_json: Path):
+    """调用 scripts/render_check.py 做渲染级复核。返回结构化结果或 None。"""
+    script = Path(__file__).resolve().parent / "render_check.py"
+    try:
+        result = subprocess.run(
+            [sys.executable, str(script), str(deck_json), "--json-output"],
+            capture_output=True, text=True, timeout=600, encoding="utf-8",
+        )
+    except Exception as e:
+        print("warning: 渲染级复核调用失败：%s" % e, file=sys.stderr)
+        return None
+    if result.returncode not in (0, 1):
+        print("warning: render_check 不可用（%s）：%s"
+              % (result.returncode, result.stderr.strip()[:300]), file=sys.stderr)
+        return None
+    # 解析 JSON 输出（--json-output 只输出纯 JSON）
+    try:
+        data = json.loads(result.stdout)
+        data["render_failed"] = result.returncode == 1
+        return data
+    except Exception:
+        print("warning: 无法解析 render_check 输出", file=sys.stderr)
+        return None
+
+
+def _print_render_result(render_result):
+    """人类可读打印渲染级复核结果。"""
+    print("\n" + "=" * 60)
+    print("渲染级复核（render_check.py 像素级检测）")
+    print("=" * 60)
+    total = render_result.get("total_score", 0)
+    pages = render_result.get("pages", [])
+    fails = [p for p in pages if not p.get("pass")]
+    print("渲染总分：%.1f / 100（%d 页，%d 页未达标）" % (total, len(pages), len(fails)))
+    for p in pages:
+        status = "PASS" if p.get("pass") else "FAIL"
+        dens = p.get("density")
+        if dens is None:
+            print("  [%s] 第 %d 页 %.1f 分" % (status, p["slide"], p["score"]))
+        else:
+            print("  [%s] 第 %d 页 %.1f 分（密度 %.0f%%）" % (status, p["slide"], p["score"], dens))
+        for iss in p.get("issues", []):
+            print("    ! " + iss)
+    if render_result.get("render_failed"):
+        print("→ 渲染级存在未达标页（--strict 将失败）")
+
+
+def render_html_report(report, render_result, html_path, deck_json, auto_only):
+    """生成自包含 HTML 审查报告：每页卡片 + 缩略图 + 警告 + 渲染检测结果。"""
+    from html import escape
+    esc = escape
+    deck_dir = deck_json.parent
+    per = report["per_slide"]
+    rpages = {p.get("slide"): p for p in ((render_result or {}).get("pages") or [])}
+
+    L = []
+    L.append("<!DOCTYPE html>")
+    L.append('<html lang="zh-CN"><head><meta charset="utf-8">')
+    L.append("<title>ppt-studio 质量审查报告</title><style>")
+    L.append("body{font-family:'Microsoft YaHei',Arial,sans-serif;margin:32px;background:#f4f6fa;color:#1f2937}")
+    L.append("h1{font-size:22px}.summary{background:#fff;padding:14px 18px;border-radius:10px;border:1px solid #e5e7eb}")
+    L.append(".rsum{background:#eef4ff;padding:10px 18px;border-radius:10px;margin-top:10px}")
+    L.append(".grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:18px}")
+    L.append(".slide{background:#fff;border-radius:12px;padding:14px;border:1px solid #e5e7eb;border-top:4px solid #9ca3af}")
+    L.append(".slide.pass{border-top-color:#10b981}.slide.fail{border-top-color:#ef4444}")
+    L.append(".head{font-weight:700;margin-bottom:8px}.score{float:right;color:#6b7280;font-weight:400}")
+    L.append("img{width:100%;border-radius:8px;border:1px solid #e5e7eb}")
+    L.append(".nothumb{width:100%;height:120px;border-radius:8px;background:#f3f4f6;color:#9ca3af;display:flex;align-items:center;justify-content:center;font-size:13px}")
+    L.append(".iss{font-size:12.5px;color:#b91c1c;margin-top:5px;padding:4px 8px;background:#fef2f2;border-radius:6px}")
+    L.append(".iss.r{background:#fff7ed;color:#9a3412}")
+    L.append(".ok{font-size:12.5px;color:#15803d;margin-top:5px}")
+    L.append(".rscore{font-size:12px;color:#6b7280;margin-top:6px}")
+    L.append(".check{font-size:13px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 16px;margin-top:18px}")
+    L.append("</style></head><body>")
+    L.append("<h1>ppt-studio 质量审查报告 · %s</h1>" % esc(deck_json.name))
+    L.append('<p class="summary">整体 <b>%d</b> 分 · %d 页 · %d 条警告 · %s</p>'
+             % (report["overall_score"], len(per), report["total_warnings"], esc(report["summary"])))
+    if render_result:
+        rp = render_result.get("pages") or []
+        fails = len([p for p in rp if not p.get("pass")])
+        L.append('<p class="rsum">渲染级：%.1f / 100（%d 页，%d 页未达标）</p>'
+                 % (render_result.get("total_score", 0), len(rp), fails))
+    L.append('<div class="grid">')
+    for p in per:
+        cls = "pass" if p["pass"] else "fail"
+        L.append('<div class="slide %s"><div class="head">%s · %s <span class="score">%d 分</span></div>'
+                 % (cls, esc(p["id"]), esc(p["title"]), p["score"]))
+        thumb = deck_dir / "_render_check" / ("slide-%d.png" % p["slide_index"])
+        if thumb.is_file():
+            L.append('<img src="_render_check/slide-%d.png" alt="第 %d 页">'
+                     % (p["slide_index"], p["slide_index"]))
+        else:
+            L.append('<div class="nothumb">未渲染缩略图（ppt render 可生成）</div>')
+        rp = rpages.get(p["slide_index"])
+        if rp:
+            dens = rp.get("density")
+            L.append('<div class="rscore">渲染 %.1f 分%s</div>'
+                     % (rp.get("score", 0), " · 密度 %.0f%%" % dens if dens is not None else ""))
+            for iss in rp.get("issues", []):
+                L.append('<div class="iss r">%s</div>' % esc(iss))
+        for w in p["warnings"]:
+            L.append('<div class="iss">%s</div>' % esc(w))
+        if not p["warnings"]:
+            L.append('<div class="ok">无警告</div>')
+        L.append("</div>")
+    L.append("</div>")
+    if not auto_only:
+        L.append('<div class="check">人工复核清单（无法自动判定，请逐项确认）：<br>')
+        for k, n, th in DIMENSIONS:
+            if k not in ("visual", "hard"):
+                L.append('&nbsp;&nbsp;☐ %s（阈值 %d 分）<br>' % (esc(n), th))
+        L.append("</div>")
+    L.append("</body></html>")
+
+    html_path.parent.mkdir(parents=True, exist_ok=True)
+    html_path.write_text("\n".join(L), encoding="utf-8")
 
 
 if __name__ == "__main__":

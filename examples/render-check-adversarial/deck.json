@@ -1,0 +1,65 @@
+{
+  "_doc": "render_check 对抗性测试 deck：每页一个刻意制造的缺陷",
+  "canvas": { "w": 960, "h": 540 },
+  "theme": {
+    "colors": {
+      "$bg": "#FFFFFF",
+      "$paper": "#F5F7FA",
+      "$primary": "#0B3D91",
+      "$accent": "#2E6BB0",
+      "$text": "#1A1A1A",
+      "$muted": "#6B7280",
+      "$line": "#E5E7EB",
+      "$ink": "#0B3D91"
+    }
+  },
+  "slides": [
+    {
+      "id": "01",
+      "title": "越界元素",
+      "background": { "color": "#FFFFFF" },
+      "elements": [
+        { "type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 48, "fontSize": 40, "color": "$text", "text": "越界检测页" },
+        { "type": "shape", "shapeName": "rect", "x": 850, "y": 500, "w": 200, "h": 100, "fill": { "color": "$primary" } }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "文字被遮挡",
+      "background": { "color": "#FFFFFF" },
+      "elements": [
+        { "type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 48, "fontSize": 40, "color": "$text", "text": "遮挡检测页" },
+        { "type": "text", "role": "body", "x": 120, "y": 170, "w": 260, "h": 60, "fontSize": 18, "color": "$text", "text": "这段文字被深蓝色块盖住了" },
+        { "type": "shape", "shapeName": "rect", "x": 100, "y": 150, "w": 300, "h": 120, "fill": { "color": "$primary" } }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "过密页",
+      "background": { "color": "#FFFFFF" },
+      "elements": [
+        { "type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 48, "fontSize": 40, "color": "$text", "text": "过密检测页" },
+        { "type": "shape", "shapeName": "rect", "x": 20, "y": 90, "w": 920, "h": 60, "fill": { "color": "$primary" } },
+        { "type": "shape", "shapeName": "rect", "x": 20, "y": 160, "w": 920, "h": 60, "fill": { "color": "$primary" } },
+        { "type": "shape", "shapeName": "rect", "x": 20, "y": 230, "w": 920, "h": 60, "fill": { "color": "$primary" } },
+        { "type": "shape", "shapeName": "rect", "x": 20, "y": 300, "w": 920, "h": 60, "fill": { "color": "$primary" } },
+        { "type": "shape", "shapeName": "rect", "x": 20, "y": 370, "w": 920, "h": 60, "fill": { "color": "$primary" } },
+        { "type": "shape", "shapeName": "rect", "x": 20, "y": 440, "w": 920, "h": 60, "fill": { "color": "$primary" } },
+        { "type": "text", "role": "body", "x": 40, "y": 105, "w": 880, "h": 30, "fontSize": 16, "color": "#FFFFFF", "text": "密集项目一：这是第一行密集内容" },
+        { "type": "text", "role": "body", "x": 40, "y": 175, "w": 880, "h": 30, "fontSize": 16, "color": "#FFFFFF", "text": "密集项目二：这是第二行密集内容" },
+        { "type": "text", "role": "body", "x": 40, "y": 245, "w": 880, "h": 30, "fontSize": 16, "color": "#FFFFFF", "text": "密集项目三：这是第三行密集内容" },
+        { "type": "text", "role": "body", "x": 40, "y": 315, "w": 880, "h": 30, "fontSize": 16, "color": "#FFFFFF", "text": "密集项目四：这是第四行密集内容" },
+        { "type": "text", "role": "body", "x": 40, "y": 385, "w": 880, "h": 30, "fontSize": 16, "color": "#FFFFFF", "text": "密集项目五：这是第五行密集内容" },
+        { "type": "text", "role": "body", "x": 40, "y": 455, "w": 880, "h": 30, "fontSize": 16, "color": "#FFFFFF", "text": "密集项目六：这是第六行密集内容" }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "过空页",
+      "background": { "color": "#FFFFFF" },
+      "elements": [
+        { "type": "text", "role": "title", "x": 48, "y": 36, "w": 864, "h": 48, "fontSize": 40, "color": "$text", "text": "过空检测页" }
+      ]
+    }
+  ]
+}
